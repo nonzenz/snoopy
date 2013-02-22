@@ -1,9 +1,8 @@
 #wrapper {
-width:750px;
-margin-top:10px;
-overflow:auto;
+	width:750px;
+	margin-top:10px;
+	overflow:auto;
 }
-
 body, html {
 	width:750px;
 	color:#000000;
@@ -22,7 +21,6 @@ h1{
 p:first-line{
 	font-weight:bold;
 }
-
 #logo {
 	font-family: Arial, Helvetica, sans-serif;
 	color: #FFFFFF;
@@ -32,13 +30,12 @@ p:first-line{
 	line-height: 4px;
 	font-variant: normal;
 }
-
 #vasakTOP{
 	float:left;
 	background-color:#D7F2FF;
 	width:310px;
 	height: 450px;
-	margin-bottom:5px;
+	margin-top:5px;
 }
 #vasakTOP img {
 	position: relative;
@@ -46,12 +43,12 @@ p:first-line{
 	width: 290px;
 	margin: 10px;
 }
-
 #Main{
 	float:right;
 	width:435px;
 	height:490px;
 	margin-bottom:20px;
+	margin-top:5px;
 	background-color:#D7F2FF;
 	text-align: left;
 	font-family: "Times New Roman", Times, serif;
@@ -60,22 +57,25 @@ p:first-line{
 #Main p,h1{
 	padding: 15px;
 }
-
 #mainMenu{
 	float:right;
-	width:435px;
+	width:750px;
 	height: 40px;
-	margin-bottom:5px;
+	margin: 5px;
 	background-color:#00FF66;
 }
-
+#mainMenuText{
+	font-size: 20px;
+	color: white;
+}
 #vasakBOTTOM {
 	float:left;
 	background-color:#D7F2FF;
 	width:310px;
 	height: 80px;
+	margin-top: 5px;
 }
-
+}
 #logo p {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 12px;
@@ -84,12 +84,13 @@ p:first-line{
 	margin-bottom:40px;
 	color: #FFFF99;
 }
-
-
+ul{
+	color:white;
+	font-size:18px;
+}
 #pildiMenu{
 	float:right;
 }
-
 #footer{
 	font-size:0.65em;
 	font-weight: normal;
