@@ -25,6 +25,11 @@ h2{
 	font-size: 15px;
 }
 
+h3{
+	color: black;
+	font-family: "Times New Roman";
+	font-size: 15px;
+}
 p:first-line{
 	font-weight:normal;
 }
@@ -48,7 +53,20 @@ p:first-line{
 	height: 350px;
 	margin-top:5px;
 }
+#paremTOP{
+	float:right;
+	background-color:#D7F2FF;
+	width:310px;
+	height: 350px;
+	margin-top:5px;
+}
 #vasakTOP img {
+	position: relative;
+	height: 330px;
+	width: 290px;
+	margin: 10px;
+}
+#paremTOP img {
 	position: relative;
 	height: 330px;
 	width: 290px;
@@ -59,6 +77,28 @@ p:first-line{
 	width:435px;
 	height:530px;
 	margin-bottom:20px;
+	margin-top:5px;
+	background-color:#D7F2FF;
+	text-align: left;
+	font-family: "Times New Roman", Times, serif;
+	line-height: normal;
+}
+#MainVasak{
+	float:left;
+	width:435px;
+	height:530px;
+	margin-bottom:20px;
+	margin-top:5px;
+	background-color:#D7F2FF;
+	text-align: left;
+	font-family: "Times New Roman", Times, serif;
+	line-height: normal;
+}
+#suurKast{
+	float:left;
+	width:750px;
+	height:730px;
+	margin-bottom:10px;
 	margin-top:5px;
 	background-color:#D7F2FF;
 	text-align: left;
@@ -86,6 +126,12 @@ p:first-line{
 	height: 175px;
 	margin-top: 5px;
 }
+#paremBOTTOM {
+	float:right;
+	background-color:#D7F2FF;
+	width:310px;
+	height: 175px;
+	margin-top: 5px;
 }
 #logo p {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -99,8 +145,11 @@ ul{
 	color:white;
 	font-size:18px;
 }
-#pildiMenu{
+#pildiMenuParem{
 	float:right;
+}
+#pildiMenuVasak{
+	float:left;
 }
 #footer{
 	font-size:0.65em;
