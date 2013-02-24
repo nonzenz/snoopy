@@ -120,6 +120,15 @@ h3{
 	font-family: "Times New Roman", Times, serif;
 	line-height: normal;
 }
+#logiKast{
+	float:center;
+	width:450px;
+	height:300px;
+	margin:150px;
+	margin-top:30px;
+	background-color:#66ff33;
+	text-align: middle;
+}
 #Main p,h1{
 	padding: 5px;
 }
