@@ -1,0 +1,3 @@
+# Module valimised
+# RPC service class, partial path of RPC policy file
+valimised.client.GreetingService, 11B060A4FD4B3F2876356F4A66DF83D9.gwt.rpc
