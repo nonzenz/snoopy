@@ -7,8 +7,9 @@ body, html {
 	width:750px;
 	color:#000000;
 	margin:0 auto;
-	margin-top:10px;
-	background-color: #66ccff;
+	background-image:url('images/grad.png');
+	background-repeat: repeat-x;
+	background-color: #5969D3;
 	font-family: "Times New Roman";
 }
 p{
