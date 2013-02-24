@@ -1,52 +1,63 @@
 #wrapper {
 	width:750px;
-	margin-top:10px;
+	margin-top:5px;
 	overflow:auto;
 }
 body, html {
 	width:750px;
 	color:#000000;
 	margin:0 auto;
-	margin-top:30px;
-	background-color: #00CCFF;
-	font-family: "Times New Roman", Helvetica, Arial, sans-serif
+	margin-top:10px;
+	background-color: #66ccff;
+	font-family: "Times New Roman";
 }
 
 h1{
-	color: #FFFFFF;
+	color: #33cc33;
 	font-family: "Times New Roman", Times, serif;
 	font-weight: bold;
+	font-size: 25px;
+}
+
+h2{
+	color: white;
+	font-family: "Times New Roman";
+	font-size: 15px;
 }
 
 p:first-line{
-	font-weight:bold;
+	font-weight:normal;
 }
+
+
 #logo {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Times New Roman, Helvetica, sans-serif;
 	color: #FFFFFF;
-	font-size: 24px;
+	font-size: 30px;
 	font-weight: bolder;
 	margin: 0 auto;
 	line-height: 4px;
 	font-variant: normal;
 }
+
+
 #vasakTOP{
 	float:left;
 	background-color:#D7F2FF;
 	width:310px;
-	height: 450px;
+	height: 350px;
 	margin-top:5px;
 }
 #vasakTOP img {
 	position: relative;
-	height: 430px;
+	height: 330px;
 	width: 290px;
 	margin: 10px;
 }
 #Main{
 	float:right;
 	width:435px;
-	height:490px;
+	height:590px;
 	margin-bottom:20px;
 	margin-top:5px;
 	background-color:#D7F2FF;
@@ -59,15 +70,15 @@ p:first-line{
 }
 #mainMenu{
 	float:right;
-	width:750px;
-	height: 40px;
-	margin: 5px;
-	background-color:#00FF66;
-}
-#mainMenuText{
+	width:146px;
+	height: 25px;
+	margin: 2px;
+	background-color:#66ff33;
 	font-size: 20px;
 	color: white;
+	text-align: center;
 }
+
 #vasakBOTTOM {
 	float:left;
 	background-color:#D7F2FF;
