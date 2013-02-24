@@ -39,8 +39,14 @@ h3{
 	margin: 0 auto;
 	line-height: 4px;
 	font-variant: normal;
+	border-radius: 10px;  
+	-moz-border-radius: 10px;  
+	-webkit-border-radius: 10px;
 }
 #vasakTOP{
+	border-radius: 10px;  
+	-moz-border-radius: 10px;  
+	-webkit-border-radius: 10px;
 	float:left;
 	background-color:#D7F2FF;
 	width:310px;
@@ -48,6 +54,9 @@ h3{
 	margin-top:5px;
 }
 #paremTOP{
+	border-radius: 10px;  
+	-moz-border-radius: 10px;  
+	-webkit-border-radius: 10px;
 	float:right;
 	background-color:#D7F2FF;
 	width:310px;
@@ -55,12 +64,18 @@ h3{
 	margin-top:5px;
 }
 #vasakTOP img {
+	border-radius: 10px;  
+	-moz-border-radius: 10px;  
+	-webkit-border-radius: 10px;
 	position: relative;
 	height: 330px;
 	width: 290px;
 	margin: 10px;
 }
 #paremTOP img {
+	border-radius: 10px;  
+	-moz-border-radius: 10px;  
+	-webkit-border-radius: 10px;
 	position: relative;
 	height: 330px;
 	width: 290px;
@@ -76,6 +91,9 @@ h3{
 	text-align: left;
 	font-family: "Times New Roman", Times, serif;
 	line-height: normal;
+	border-radius: 10px;  
+	-moz-border-radius: 10px;  
+	-webkit-border-radius: 10px;
 }
 #MainVasak{
 	float:left;
@@ -87,8 +105,14 @@ h3{
 	text-align: left;
 	font-family: "Times New Roman", Times, serif;
 	line-height: normal;
+	border-radius: 10px;  
+	-moz-border-radius: 10px;  
+	-webkit-border-radius: 10px;
 }
 #MainVasakValija{
+	border-radius: 10px;  
+	-moz-border-radius: 10px;  
+	-webkit-border-radius: 10px;
 	float:left;
 	width:435px;
 	height:700px;
@@ -100,6 +124,9 @@ h3{
 	line-height: normal;
 }
 #ParemKitsas{
+	border-radius: 10px;  
+	-moz-border-radius: 10px;  
+	-webkit-border-radius: 10px;
 	float:right;
 	width:310px;
 	height:480px;
@@ -111,6 +138,9 @@ h3{
 	line-height: normal;
 }
 #suurKast{
+	border-radius: 10px;  
+	-moz-border-radius: 10px;  
+	-webkit-border-radius: 10px;
 	float:left;
 	width:750px;
 	height:730px;
@@ -122,6 +152,9 @@ h3{
 	line-height: normal;
 }
 #logiKast{
+	border-radius: 10px;  
+	-moz-border-radius: 10px;  
+	-webkit-border-radius: 10px;
 	float:center;
 	width:450px;
 	height:300px;
@@ -149,8 +182,14 @@ h3{
 	width:310px;
 	height: 175px;
 	margin-top: 5px;
+	border-radius: 10px;  
+	-moz-border-radius: 10px;  
+	-webkit-border-radius: 10px;
 }
 #paremBOTTOM {
+	border-radius: 10px;  
+	-moz-border-radius: 10px;  
+	-webkit-border-radius: 10px;
 	float:right;
 	background-color:#D7F2FF;
 	width:310px;
@@ -158,6 +197,9 @@ h3{
 	margin-top: 5px;
 }
 #paremBottomValijale {
+	border-radius: 10px;  
+	-moz-border-radius: 10px;  
+	-webkit-border-radius: 10px;
 	float:right;
 	background-color:#D7F2FF;
 	width:310px;
@@ -165,6 +207,9 @@ h3{
 	margin-top: 5px;
 }
 #paremBottomValijale img {
+	border-radius: 10px;  
+	-moz-border-radius: 10px;  
+	-webkit-border-radius: 10px;
 	position: relative;
 	height: 208px;
 	width: 300px;
@@ -183,9 +228,15 @@ ul{
 	font-size:18px;
 }
 #pildiMenuParem{
+	border-radius: 10px;  
+	-moz-border-radius: 10px;  
+	-webkit-border-radius: 10px;
 	float:right;
 }
 #pildiMenuVasak{
+	border-radius: 10px;  
+	-moz-border-radius: 10px;  
+	-webkit-border-radius: 10px;
 	float:left;
 }
 #footer{
