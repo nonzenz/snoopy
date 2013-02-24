@@ -8,8 +8,8 @@
   -->
   <threadsafe>true</threadsafe>
 	
-	
-	<public-root>/html</public-root>
+  <public-root>/html</public-root>
+  
   <!-- Configure serving/caching of GWT files -->
   <static-files>
 
