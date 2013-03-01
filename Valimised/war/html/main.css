@@ -12,28 +12,43 @@ p{
 	margin: 4px;
 }
 
+p1{
+	margin: 4px;
+	font-size: 14px;
+}
+
 h1{
 	color: black;
-	font-family: "Times New Roman", Times, serif;
+	font-family: georgia,"Lucida Grande", Geneva, Arial, Verdana, sans-serif;
 	font-weight: bold;
 	font-size: 20px;
 }
 
 h2{
 	color: white;
-	font-family: "Times New Roman";
+	font-family: georgia,"Lucida Grande", Geneva, Arial, Verdana, sans-serif;
 	font-size: 15px;
 }
 
 h3{
 	color: black;
-	font-family: "Times New Roman";
+	font-family: georgia,"Lucida Grande", Geneva, Arial, Verdana, sans-serif;
 	font-size: 15px;
 }
 
 ul{
 	color: white;
 	font-size: 18px;
+}
+
+button {
+	background-color: #476BB2;
+	border-radius: 20px;
+}
+
+img {
+	height:70px;
+	float: left;
 }
 
 #logo {}
@@ -130,7 +145,7 @@ ul{
 	width:450px;
 	height:300px;
 	margin:150px;
-	margin-top:30px;
+	margin-top:100px;
 	background-color: #476BB2;
 	text-align: middle;
 }
