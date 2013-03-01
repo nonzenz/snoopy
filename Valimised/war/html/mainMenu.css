@@ -1,8 +1,9 @@
 #nav {
 	margin: 0;
-	padding: 7px 6px 0;
+	padding: 7px 32px 0;
 	background: #7d7d7d url(images/gradientMenu.png) repeat-x 0 -110px;
 	line-height: 100%;
+	background-color: #4D4D4D;
 
 	border-radius: 2em;
 	-webkit-border-radius: 2em;
