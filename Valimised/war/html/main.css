@@ -1,11 +1,14 @@
 body, html {
 	font-family: georgia,"Lucida Grande", Geneva, Arial, Verdana, sans-serif;
 	font-size: 1em;
-	line-height: 1.5em;
+	line-height: 1.5em;	
 	background: #c4eaff url(http://frexpaper.com/wp-content/uploads/2013/02/Blue-vintage-wallpaper-background-19820-background-patterns-others.jpg) repeat-x;
 	width: 750px;
 	margin: 0 auto;
 	color: white;
+	border-bottom: 1px dotted #fff;
+	
+	text-align: center;
 	}
 
 p{
@@ -18,22 +21,16 @@ p1{
 }
 
 h1{
-	color: black;
-	font-family: georgia,"Lucida Grande", Geneva, Arial, Verdana, sans-serif;
 	font-weight: bold;
 	font-size: 20px;
 }
 
 h2{
-	color: white;
-	font-family: georgia,"Lucida Grande", Geneva, Arial, Verdana, sans-serif;
 	font-size: 15px;
 }
 
 h3{
-	color: black;
-	font-family: georgia,"Lucida Grande", Geneva, Arial, Verdana, sans-serif;
-	font-size: 15px;
+	font-size: 12px;
 }
 
 ul{
@@ -48,7 +45,8 @@ button {
 
 #logo {}
 
-#vasakTOP, #paremTOP, #Main, #MainVasak, #MainVasakValija, #ParemKitsas, #suurKast, #ParemKitsas, #paremBOTTOM, #vasakBOTTOM{
+#vasakTOP, #paremTOP, #Main, #MainVasak, #MainVasakValija, #ParemKitsas, 
+#suurKast, #ParemKitsas, #paremBOTTOM, #vasakBOTTOM, #paremBottomValijale{
 	border-radius: 10px;  
 	-moz-border-radius: 10px;  
 	-webkit-border-radius: 10px;
@@ -120,13 +118,11 @@ button {
 	height: 480px;
 	margin-bottom: 2px;
 	margin-top: 5px;
-	text-align: left;
 }
 
 #suurKast{
 	float: left;
 	width: 750px;
-	height: 730px;
 	margin-bottom: 10px;
 	margin-top: 2px;
 	text-align: left;
@@ -151,7 +147,6 @@ button {
 	background-color:#476BB2;
 	font-size: 20px;
 	color: white;
-	text-align: center;
 }
 
 #vasakBOTTOM {
@@ -173,7 +168,6 @@ button {
 	-moz-border-radius: 10px;  
 	-webkit-border-radius: 10px;
 	float:right;
-	background-color:#D7F2FF;
 	width:310px;
 	height: 212px;
 	margin-top: 5px;
@@ -184,7 +178,7 @@ button {
 	-moz-border-radius: 10px;  
 	-webkit-border-radius: 10px;
 	position: relative;
-	height: 208px;
+	height: 200px;
 	width: 300px;
 	margin: 5px;
 }
@@ -206,7 +200,6 @@ button {
 #footer{
 	font-size: 0.65em;
 	font-weight: normal;
-	text-align: center;
 	clear: both;
 	color: #666666;
 }
