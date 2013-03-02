@@ -102,7 +102,7 @@ img {
 #MainVasakValija{
 	float:left;
 	width:300px;
-	height:850px;
+	height:600px;
 	margin-bottom:3px;
 	margin-top:5px;
 	background-color:#4396E8;
@@ -124,7 +124,7 @@ img {
 #suurKast{
 	float:left;
 	width:300px;
-	height:500px;
+	height:600px;
 	margin-bottom:10px;
 	margin-top:5px;
 	background-color:#4396E8;
@@ -135,7 +135,7 @@ img {
 #suurKastStat{
 	float:left;
 	width:300px;
-	height:450px;
+	height:600px;
 	margin-bottom:10px;
 	margin-top:5px;
 	background-color:#4396E8;

@@ -46,11 +46,6 @@ button {
 	border-radius: 20px;
 }
 
-img {
-	height:70px;
-	float: left;
-}
-
 #logo {}
 
 #vasakTOP, #paremTOP, #Main, #MainVasak, #MainVasakValija, #ParemKitsas, #suurKast, #ParemKitsas, #paremBOTTOM, #vasakBOTTOM{
@@ -164,7 +159,7 @@ img {
 #vasakBOTTOM {
 	float:left;
 	width: 310px;
-	height: 175px;
+	height: 272px;
 	margin-top: 5px;
 	}
 
