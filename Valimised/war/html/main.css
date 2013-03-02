@@ -89,7 +89,7 @@ button {
 
 #Main{
 	float: right;
-	width: 435px;
+	width: 435px; height: 650px;
 	margin-bottom: 20px;
 	margin-top: 2px;
 	text-align: left;
@@ -127,6 +127,7 @@ button {
 	margin-bottom: 10px;
 	margin-top: 2px;
 	text-align: left;
+	padding-bottom: 20px;
 }
 
 #logiKast{
@@ -153,7 +154,7 @@ button {
 #vasakBOTTOM {
 	float:left;
 	width: 310px;
-	height: 272px;
+	height: 295px;
 	margin-top: 5px;
 	}
 
