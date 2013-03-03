@@ -8,21 +8,21 @@
 	<link href="mainMenu.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href="print.css" rel="stylesheet" type="text/css" media="print"/>
 	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/main.js"></script>
 </head>
 
 <body>
-	<div id="content">
-		<script>isMobile()</script>	
+	<script>isMobile()</script>
+	<ul id="menu" class="no-print">
+		<li><a href="WebHome.html">Pealeht</a><li>
+		<li><a href="WebStatistika.html">Statistika</a><li>
+		<li><a href="WebKandidaadid.html">Kandidaadid</a><li>
+		<li><a href="WebValijale.html">Valijale</a><li>
+		<li><a href="WebLogi.html">Logi sisse</a><li>
+	</ul>
 	
-		<ul id="menu" class="no-print"> 
-			<li id=1><a href="WebHome.html">Pealeht</a><li>
-			<li id=2><a href="WebStatistika.html">Statistika</a><li>
-			<li id=3><a href="WebKandidaadid.html">Kandidaadid</a><li>
-			<li id=4><a href="WebValijale.html">Valijale</a><li>
-			<li id=5><a href="WebLogi.html">Logi sisse</a><li>
-		</ul>
-		
+	<div id="content">
 		<div id="vasakTOP">
 			<img src="images/pealeht.jpg" alt="Valimine on iga kodaniku õigus ja kohustus!" />
 		</div>
@@ -63,13 +63,14 @@
 			<a href="#">&bull; Uudis 2....</a><br/>
 			<a href="#">&bull; Uudis 2....</a>
 		</div>
-		
-		<div id="footer" class="no-print">
-			E-valimised &copy; 2013
-			<br>
-			<a href = "#">Terms of Use</a> | <a href = "#">Privacy Policy</a>
-		</div>
 	</div>
+	
+	<div id="footer" class="no-print">
+		E-valimised &copy; 2013
+		<br>
+		<a href = "#">Terms of Use</a> | <a href = "#">Privacy Policy</a>
+	</div>
+
 </body>
 
 
