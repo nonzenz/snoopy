@@ -6,6 +6,8 @@
 	<link href="mainMenu.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href="print.css" rel="stylesheet" type="text/css" media="print"/>
 	<title>E-valimised - Statistika</title>
+	<!-- <script src="js/main.js"></script>  -->
+	
 </head>
 
 <body>
@@ -20,34 +22,24 @@
 	<div id="content">
 		<div id="suurKast">
 		<h2><a href="WebKandidaadiReg.html">Kandideeri</a></h2>
+			
 			<h1>Kandidaadi registreerimine</h1>
+			<p id="mess"></p>
+		
 			<form action="register.php" id="register" method="post"><table border="0"> <tbody>
-			<tr><td><label for="Eesnimi">Eesnimi*: </label> </td>
-			<td><input id="Eesnimi" maxlength="45" name="Eesnimi" type="text" /> </td></tr>
-			<tr><td><label for="Perekonnanimi">Perekonnanimi*:</label> </td>
-			<td><input id="Perekonnanimi" maxlength="45" name="Perekonnanimi" type="text" /></td></tr>
-			<tr><td><label for="Elukoha aadress">Elukoha aadress:</label></td>
-			<td><input id="Elukoha aadress" maxlength="45" name="Elukoha aadress" type="text" /></td></tr>
-			<tr><td><label for="Isikukood">Isikukood*:</label></td>
-			<td><input id="Isikukood" maxlength="45" name="Isikukood" type="text" /></td></tr>
 			<tr><td><label for="Erakond">Erakond*:</label></td>
 			<td><input id="Erakond" maxlength="45" name="Erakond" type="text" /></td></tr>
 			<tr><td><label for="Piirkond">Piirkond*:</label></td>
 			<td><input id="Piirkond" maxlength="45" name="Piirkond" type="text" /></td></tr>
-			<tr><td><label for="Haridus">Haridus:</label></td>
-			<td><input id="Haridus" maxlength="45" name="Haridus" type="text" /></td></tr>
-			<tr><td><label for="Elukutse">Elukutse:</label></td>
-			<td><input id="Elukutse" maxlength="45" name="Elukutse" type="text" /></td></tr>
-			<tr><td><label for="Töökoht">Töökoht:</label></td>
-			<td><input id="Töökoht" maxlength="45" name="Töökoht" type="text" /></td></tr>
 			<tr><td><label for="Email">Email:</label></td>
 			<td><input id="Email" maxlength="45" name="Email" type="text" /></td></tr>
-			<tr><td><label for="Telefoninumber">Telefoninumber:</label></td>
-			<td><input id="Telefoninumber" maxlength="45" name="Telefoninumber" type="text" /></td></tr>
 			<tr><td><label for="Pilt">Pilt:</label></td>
-			<td><button> Vali fail </button></td></tr>
-			<tr><td> <button> Registreeru </button></td></tr>
-			
+			<td><button> Vali pilt </button></td></tr>
+			<tr><td><label for="Lisa CV">CV:</label></td>
+			<td><button> Vali CV </button></td></tr>
+			<tr><td> <button type="button"> Registreeru </button> </td></tr>
+		
+		
 	</tbody></table></form>
 
 		</div>	
