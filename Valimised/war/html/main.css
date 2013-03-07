@@ -11,7 +11,7 @@ body, html {
 	}
 
 
-p, p1, h2, h3{
+p, p1, h2, h3, form, tbody{
 	padding-left: 10px;
 	}
 	

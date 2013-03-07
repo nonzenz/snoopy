@@ -4,7 +4,6 @@ function isMobile(){
 	}
 }
 
-
 function myFunction(){
 	document.body.style.cursor  = 'wait';
 	setTimeout('stopCursor()',1000);
@@ -13,9 +12,6 @@ function myFunction(){
 function stopCursor(){
 	document.body.style.cursor  = 'default';
 }
-
-var busy = true;
-
 
 var $j = jQuery.noConflict();
 
