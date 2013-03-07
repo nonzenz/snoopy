@@ -27,10 +27,6 @@
 			<p id="mess"></p>
 		
 			<form action="register.php" id="register" method="post"><table border="0"> <tbody>
-			<tr><td><label for="Erakond">Erakond*:</label></td>
-			<td><input id="Erakond" maxlength="45" name="Erakond" type="text" /></td></tr>
-			<tr><td><label for="Piirkond">Piirkond*:</label></td>
-			<td><input id="Piirkond" maxlength="45" name="Piirkond" type="text" /></td></tr>
 			<tr><td><label for="Email">Email:</label></td>
 			<td><input id="Email" maxlength="45" name="Email" type="text" /></td></tr>
 			<tr><td><label for="Pilt">Pilt:</label></td>
@@ -39,6 +35,21 @@
 			<td><button> Vali CV </button></td></tr>
 			<tr><td> <button type="button"> Registreeru </button> </td></tr>
 		
+			<p>Erakond*<select name="Erakond">
+  					<option value="0">Vali</option>
+  					<option value="1">Erakond Karvased 1</option>
+  					<option value="2">Erakond Karvased 2</option>
+					</select>
+				</p>
+			
+			
+			<p>Piirkond*<select name="Piirkond">
+  					<option value="0">Vali</option>
+  					<option value="1">Valimispiirkond 1</option>
+  					<option value="2">Valimispiirkond 2</option>
+					</select>
+				</p>
+				
 		
 	</tbody></table></form>
 
