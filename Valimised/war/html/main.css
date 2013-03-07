@@ -141,6 +141,10 @@ button {
 	background-color: #476BB2;
 }
 
+#message{
+	width: 15px;	
+}
+
 #mainMenu{
 	float:right;
 	width:146px;
