@@ -11,7 +11,7 @@ body, html {
 	}
 
 
-p, p1, h2, h3{
+p, p1, h2, h3, form, tbody{
 	padding-left: 10px;
 	}
 	
@@ -139,6 +139,10 @@ button {
 	margin:150px;
 	margin-top:100px;
 	background-color: #476BB2;
+}
+
+#message{
+	width: 15px;	
 }
 
 #mainMenu{

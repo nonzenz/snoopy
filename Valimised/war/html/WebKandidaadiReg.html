@@ -5,9 +5,8 @@
 	<link href="main.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href="mainMenu.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href="print.css" rel="stylesheet" type="text/css" media="print"/>
-	<title>E-valimised - Statistika</title>
-	<!-- <script src="js/main.js"></script>  -->
-	
+	<script src="js/jqueryKatse.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 </head>
 
 <body>
@@ -21,45 +20,48 @@
 	
 	<div id="content">
 		<div id="suurKast">
-		<h2><a href="WebKandidaadiReg.html">Kandideeri</a></h2>
 			
 			<h1>Kandidaadi registreerimine</h1>
-			<p id="mess"></p>
-		
-			<form action="register.php" id="register" method="post"><table border="0"> <tbody>
-			<tr><td><label for="Email">Email:</label></td>
-			<td><input id="Email" maxlength="45" name="Email" type="text" /></td></tr>
-			<tr><td><label for="Pilt">Pilt:</label></td>
-			<td><button> Vali pilt </button></td></tr>
-			<tr><td><label for="Lisa CV">CV:</label></td>
-			<td><button> Vali CV </button></td></tr>
-			<tr><td> <button type="button"> Registreeru </button> </td></tr>
-		
-			<p>Erakond*<select name="Erakond">
-  					<option value="0">Vali</option>
-  					<option value="1">Erakond Karvased 1</option>
-  					<option value="2">Erakond Karvased 2</option>
-					</select>
-				</p>
+			<div id="message"></div>
 			
+			<p>Piirkond*: 
+				<select id="Piirkond" name="Piirkond*" form="register">
+			  		<option value="0">Vali</option>
+			  		<option value="1">Valimispiirkond 1</option>
+			  		<option value="2">Valimispiirkond 2</option>
+				</select>
+			</p>
+			<p>Erakond*:
+				<select id="Erakond" name="Erakond" form="register">
+			  		<option value="0">Vali</option>
+			  		<option value="1">Erakond Karvased 1</option>
+			  		<option value="2">Erakond Karvased 2</option>
+				</select>
+			</p>
+						
+			<form id="register" method="post">
+				<table border="0">
+					<tbody>
+						<tr>
+							<td><label for="Email">Email:</label></td>
+							<td><input id="Email" maxlength="45" name="Email" type="email" /></td>
+						</tr>
+						<tr>
+							<td><label for="Pilt">Vali pilt:</label></td>
+							<td><input type="file" id="pildifail" onchange="dosmth()"></input></td>
+						</tr>
+						<tr>
+							<td><label for="Lisa CV">Vali CV:</label></td>
+							<td><input type="file" id="cvfail" onchange="dosmth()"></input></td>
+						</tr>
+						<tr>
+							<td><button type="submit" onClick="validateThis()" > Registreeru </button></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
 			
-			<p>Piirkond*<select name="Piirkond">
-  					<option value="0">Vali</option>
-  					<option value="1">Valimispiirkond 1</option>
-  					<option value="2">Valimispiirkond 2</option>
-					</select>
-				</p>
-				
-		
-	</tbody></table></form>
-
-		</div>	
-	</div>
+		</div>	<!-- #suurKast end -->
+	</div> <!-- #Content end -->
 	
-	<div id="footer" class="no-print">
-		E-valimised &copy; 2013
-		<br>
-		<a href = "#">Terms of Use</a> | <a href = "#">Privacy Policy</a>
-	</div>
-
 </body>
