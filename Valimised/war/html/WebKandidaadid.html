@@ -5,6 +5,8 @@
 	<link href="main.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href="mainMenu.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href="print.css" rel="stylesheet" type="text/css" media="print"/>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 	<title>E-valimised - Statistika</title>
 </head>
 
@@ -21,20 +23,49 @@
 		<div id="suurKast">
 		<h2><a href="WebKandidaadiReg.html">Kandideeri</a></h2>
 			<h1>Kandidaatide otsing</h1>
-				<select>
-					<option value="0">Kõik valimisringkonnad</option>
-					<option value="1">Valimisringkond 1</option>
-					<option value="2">Valimisringkond 2</option>
-				</select>
-				<select>
-					<option value="0">Kõik parteid</option>
-					<option value="1">Partei 1</option>
-					<option value="2">Partei 2</option>
-				</select><button type="button">Otsi</button>
+			
+			
+				<div id="search-form">
+					<select name="region" id="sorting">
+						<option value="0">Kõik valimisringkonnad</option>
+						<option value="1">Valimisringkond 1</option>
+						<option value="2">Valimisringkond 2</option>
+					</select>
+					<select name="party">
+						<option value="0">Kõik parteid</option>
+						<option value="1">Partei 1</option>
+						<option value="2">Partei 2</option>
+					</select>
+					<input type="button" class="otsi" value="Otsi">
+				</div>			
+			
 
 				
-				<div style="height:400px;width:700px;border:1px solid #ccc;padding:5px;">
-					Siia tulevad vastava otsingu tulemused...
+				<div style="border:1px solid #ccc;padding:5px;">
+					<table id="candidate-list">
+	<thead>
+		<tr>
+			<th>Number</th>
+			<th>Nimi</th>
+			<th>Ringkond</th>
+			<th>Partei</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><a href="kandidaadi_vaade.php">0001</a></td>
+			<td><a href="kandidaadi_vaade.php">Eesnimi Perekonnanimi</a></td>
+			<td><a href="kandidaadi_vaade.php">Valimisringkond</a></td>
+			<td><a href="kandidaadi_vaade.php">Partei</a></td>
+		</tr>
+		<tr>
+			<td>0002</td>
+			<td>Eesnimi Perekonnanimi</td>
+			<td>Valimisringkond</td>
+			<td>Partei</td>
+		</tr>
+	</tbody>
+</table>
 				</div>
 		</div>	
 	</div>
