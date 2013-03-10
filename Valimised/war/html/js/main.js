@@ -35,6 +35,15 @@ $j(document).ready(function () {
 		$j("#cont").load("WebLogi.html .content");
 	}); 
     
+	$j("a").click(function(){
+    	$j.ajax({
+    		url: $j(this).attr("href"),
+    		success: function(response) {
+    			$j("#content").html(response);
+    		}
+    	});
+    });
+    
 	function renderTable (candidates) {
 		var tableBody = $j("#candidate-list tbody");
 		tableBody.empty();
@@ -47,9 +56,9 @@ $j(document).ready(function () {
 			tableBody.append(candidateRow);
 		};
 	};
-	
+
 	$j(".otsi").click(function () {
-		
+
 		var searchForm = $j("#search-form");
 		var search = {};
 		//Children- property of an Element
@@ -64,13 +73,13 @@ $j(document).ready(function () {
 		}
 		var ajaxroute;
 		if(search.region && search.party) {
-			ajaxroute = "/data/findCandidatesByPartyAndRegion.json"
+			ajaxroute = "http://meievalimised.appspot.com/data/findCandidatesByPartyAndRegion.json"
 		} else if(search.region) {
-			ajaxroute = "/data/findCandidatesByRegion.json"
+			ajaxroute = "http://meievalimised.appspot.com/data/findCandidatesByRegion.json"
 		} else if(search.party) {
-			ajaxroute = "/data/findCandidatesByParty.json"
+			ajaxroute = "http://meievalimised.appspot.com/data/findCandidatesByParty.json"
 		} else {
-			ajaxroute = "/data/candidate.json"
+			ajaxroute = "http://meievalimised.appspot.com/data/candidate.json"
 		}
 		// console.log(search, ajaxroute);
 		$j.getJSON(ajaxroute, function (response) {
@@ -87,8 +96,7 @@ $j(document).ready(function () {
 			renderTable(response.candidates)
 			console.log(response);
 		});
-		
+
 		return false;
 	});
-	
 });
