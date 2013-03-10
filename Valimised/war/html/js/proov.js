@@ -1,18 +1,18 @@
 $(document).ready(function(){
- $("#Home").click(function(){
-  $("#contentContainer").load("WebHome.html .content");
+ $("#home").click(function(){
+  $("#cont").load("WebHome.html .content");
  });
- $("#Statistika").click(function(){
-  $("#contentContainer").load("WebStatistika.html .content");
+ $("#statistika").click(function(){
+  $("#cont").load("WebStatistika.html .content");
  });
- $("#Valijale").click(function(){
-  $("#contentContainer").load("WebValijale.html .content");
+ $("#valijale").click(function(){
+  $("#con").load("WebValijale.html .content");
  });
- $("#Kandidaadid").click(function(){
-  $("#contentContainer").load("WebKandidaadid.html .content");
+ $("#kandidaadid").click(function(){
+  $("#cont").load("WebKandidaadid.html .content");
  });
- $("#Logi").click(function(){
-  $("#contentContainer").load("WebLogi.html .content");
+ $("#logi").click(function(){
+  $("#cont").load("WebLogi.html .content");
  });     
 });
 

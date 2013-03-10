@@ -16,15 +16,24 @@ function stopCursor(){
 var $j = jQuery.noConflict();
 
 $j(document).ready(function () {
+	
+	isMobile();
     
-	$j("a").click(function(){
-    	$j.ajax({
-    		url: $j(this).attr("href"),
-    		success: function(response) {
-    			$j("#content").html(response);
-    		}
-    	});
-    });
+	$("#home").click(function(){
+		$("#cont").load("WebHome.html .content");
+	});
+	$("#statistika").click(function(){
+		$("#cont").load("WebStatistika.html .content");
+	});
+	$("#valijale").click(function(){
+		$("#con").load("WebValijale.html .content");
+	});
+	$("#kandidaadid").click(function(){
+		$("#cont").load("WebKandidaadid.html .content");
+	});
+	$("#logi").click(function(){
+		$("#cont").load("WebLogi.html .content");
+	}); 
     
 	function renderTable (candidates) {
 		var tableBody = $j("#candidate-list tbody");
