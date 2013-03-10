@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 
+<html>
+
 <head>
 	<title>E-valimised - sinu tuleviku algus!</title>
-	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
 	
 	<link href="main.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href="mainMenu.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href="print.css" rel="stylesheet" type="text/css" media="print"/>
 	
 	<script src="js/jquery-1.9.1.js"></script>
-
-	<script src="js/proov.js"></script>
+	<script src="js/main.js"></script>
 </head>
 
 <body>
-	<script>isMobile()</script>
 	<ul id="menu" class="no-print">
-		<li><a href="javascript:void(0)" id="Home">Pealeht</a><li>
-		<li><a href="javascript:void(0)" id="Statistika">Statistika</a><li>
-		<li><a href="javascript:void(0)" id="Kandidaadid">Kandidaadid</a><li>
-		<li><a href="javascript:void(0)" id="Valijale">Valijale</a><li>
-		<li><a href="javascript:void(0)" id="Logi">Logi sisse</a><li>
+		<li><a href="javascript:void(0);" id="home">Pealeht</a><li>
+		<li><a href="javascript:void(0);" id="statistika">Statistika</a><li>
+		<li><a href="javascript:void(0);" id="kandidaadid">Kandidaadid</a><li>
+		<li><a href="javascript:void(0);" id="valijale">Valijale</a><li>
+		<li><a href="javascript:void(0);" id="logi">Logi sisse</a><li>
 	</ul>
 	
-	<div id="contentContainer">
+	<div id="cont">
 		<div class="content">
+			
 			<div id="vasakTOP">
 				<img src="images/pealeht.jpg" alt="Valimine on iga kodaniku õigus ja kohustus!" />
 			</div>
@@ -65,8 +66,8 @@
 				<a href="#">&bull; Uudis 2....</a><br/>
 				<a href="#">&bull; Uudis 2....</a>
 			</div>
-		</div>
-	</div>
+		</div> <!-- end of .content -->
+	</div> <!-- end of #contentContainer -->
 	
 	<div id="footer" class="no-print">
 		E-valimised &copy; 2013
@@ -76,4 +77,5 @@
 
 </body>
 
+</html>
 
