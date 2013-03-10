@@ -19,19 +19,19 @@ $j(document).ready(function () {
 	
 	isMobile();
     
-	$("#home").click(function(){
+	$j("#home").click(function(){
 		$("#cont").load("html/WebHome.html .content");
 	});
-	$("#statistika").click(function(){
+	$j("#statistika").click(function(){
 		$("#cont").load("WebStatistika.html .content");
 	});
-	$("#valijale").click(function(){
+	$j("#valijale").click(function(){
 		$("#cont").load("html/WebValijale.html .content");
 	});
-	$("#kandidaadid").click(function(){
+	$j("#kandidaadid").click(function(){
 		$("#cont").load("WebKandidaadid.html .content");
 	});
-	$("#logi").click(function(){
+	$j("#logi").click(function(){
 		$("#cont").load("WebLogi.html .content");
 	}); 
     
