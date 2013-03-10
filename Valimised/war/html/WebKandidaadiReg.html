@@ -6,7 +6,6 @@
 	<link href="mainMenu.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href="print.css" rel="stylesheet" type="text/css" media="print"/>
 	<script src="js/jqueryKatse.js"></script>
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 </head>
 
 <body>
@@ -22,21 +21,20 @@
 		<div id="suurKast">
 			
 			<h1>Kandidaadi registreerimine</h1>
-			<div id="message"></div>
 			
 			<p>Piirkond*: 
 				<select id="Piirkond" name="Piirkond*" form="register">
 			  		<option value="0">Vali</option>
 			  		<option value="1">Valimispiirkond 1</option>
 			  		<option value="2">Valimispiirkond 2</option>
-				</select>
+				</select><span id="message"></span>
 			</p>
 			<p>Erakond*:
 				<select id="Erakond" name="Erakond" form="register">
 			  		<option value="0">Vali</option>
 			  		<option value="1">Erakond Karvased 1</option>
 			  		<option value="2">Erakond Karvased 2</option>
-				</select>
+				</select><span id="message2"></span>
 			</p>
 						
 			<form id="register" method="post">
@@ -48,14 +46,14 @@
 						</tr>
 						<tr>
 							<td><label for="Pilt">Vali pilt:</label></td>
-							<td><input type="file" id="pildifail" onchange="dosmth()"></input></td>
+							<td><input type="file" id="pildifail" ></input></td>
 						</tr>
 						<tr>
 							<td><label for="Lisa CV">Vali CV:</label></td>
-							<td><input type="file" id="cvfail" onchange="dosmth()"></input></td>
+							<td><input type="file" id="cvfail"></input></td>
 						</tr>
 						<tr>
-							<td><button type="submit" onClick="validateThis()" > Registreeru </button></td>
+							<td><button onClick="validateThis()" > Registreeru </button></td>
 						</tr>
 					</tbody>
 				</table>
