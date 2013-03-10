@@ -1,12 +1,12 @@
 function validate(){
-		var y = document.getElementById("Erakond").value;
-		var x = document.getElementById("Piirkond").value;
+		var status = true;
+		var y = document.getElementById("era").value;
+		var x = document.getElementById("piir").value;
 		if (y == 0) {
-			$('div.message').html("Erakond valimata!");
-			//document.getElementById("message").innerHTML="Erakond valimata!";
+			document.getElementById("message").innerHTML="Erakond valimata!"; status = false;
 		}
 		if (x == 0) {
-			//document.getElementById("message2").innerHTML="Piirkond valimata!";
-			$('div.message2').html("Piirkond valimata!");
+			document.getElementById("message2").innerHTML="Piirkond valimata!"; status = false;
 		} 
+		return status;
 };

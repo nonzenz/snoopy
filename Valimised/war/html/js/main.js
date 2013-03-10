@@ -33,6 +33,9 @@ $j(document).ready(function () {
 	});
 	$j("#logi").click(function(){
 		$j("#cont").load("WebLogi.html .content");
+	});
+	$j("#rega").click(function(){
+		$j("#cont").load("WebKandidaadiReg.html .content");
 	}); 
     
 	$j("a").click(function(){
