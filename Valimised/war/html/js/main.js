@@ -20,19 +20,19 @@ $j(document).ready(function () {
 	isMobile();
     
 	$j("#home").click(function(){
-		$("#cont").load("html/WebHome.html .content");
+		$j("#cont").load("html/WebHome.html .content");
 	});
 	$j("#statistika").click(function(){
-		$("#cont").load("WebStatistika.html .content");
+		$j("#cont").load("WebStatistika.html .content");
 	});
 	$j("#valijale").click(function(){
-		$("#cont").load("html/WebValijale.html .content");
+		$j("#cont").load("html/WebValijale.html .content");
 	});
 	$j("#kandidaadid").click(function(){
-		$("#cont").load("WebKandidaadid.html .content");
+		$j("#cont").load("WebKandidaadid.html .content");
 	});
 	$j("#logi").click(function(){
-		$("#cont").load("WebLogi.html .content");
+		$j("#cont").load("WebLogi.html .content");
 	}); 
     
 	function renderTable (candidates) {
