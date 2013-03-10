@@ -20,15 +20,15 @@ $j(document).ready(function () {
 	isMobile();
     
 	$j("#home").click(function(){
-		$j("#cont").load("html/WebHome.html .content");
+		$j("#cont").load("WebHome.html .content");
 	});
 	$j("#statistika").click(function(){
 		$j("#cont").load("WebStatistika.html .content");
 	});
 	$j("#valijale").click(function(){
-		$j("#cont").load("html/WebValijale.html .content");
+		$j("#cont").load("WebValijale.html .content");
 	});
-	$j("#kandidaadid").click(function(){
+	$j("#kandi").click(function(){
 		$j("#cont").load("WebKandidaadid.html .content");
 	});
 	$j("#logi").click(function(){
