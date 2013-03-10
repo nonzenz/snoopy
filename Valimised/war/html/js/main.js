@@ -30,7 +30,6 @@ $j(document).ready(function () {
 		var tableBody = $j("#candidate-list tbody");
 		tableBody.empty();
 		for (var i = candidates.length - 1; i >= 0; i--) {
-			// 5ft circle of hell: Making dom elements by hand (FUTURE: Use a templating engine, eg. mustache)
 			var candidateRow = $j("<tr>").data("id", candidates[i].id);
 			$j("<td>").text(candidates[i].id).appendTo(candidateRow);
 			$j("<td>").text(candidates[i].person.name).appendTo(candidateRow);
@@ -44,7 +43,8 @@ $j(document).ready(function () {
 		
 		var searchForm = $j("#search-form");
 		var search = {};
-		if(searchForm.children.name.value) { // Must use children because name is a dom property
+		//Children- property of an Element
+		if(searchForm.children.name.value) {
 			search.name = searchForm.children.name.value
 		}
 		if($j("select[name=region]").val() != 0) {
@@ -53,9 +53,7 @@ $j(document).ready(function () {
 		if($j("select[name=region]").val() != 0) {
 			search.party = $j("select[name=party]").val();
 		}
-		// Milestone 3 only: Route to the right file
 		var ajaxroute;
-		// Name is ignored for now
 		if(search.region && search.party) {
 			ajaxroute = "/data/findCandidatesByPartyAndRegion.json"
 		} else if(search.region) {
@@ -63,11 +61,10 @@ $j(document).ready(function () {
 		} else if(search.party) {
 			ajaxroute = "/data/findCandidatesByParty.json"
 		} else {
-			ajaxroute = "/data/candidate.json" // Only due to lack of findAllCandidates
+			ajaxroute = "/data/candidate.json"
 		}
 		// console.log(search, ajaxroute);
 		$j.getJSON(ajaxroute, function (response) {
-			// Add missing stuff
 			if(!response.candidates)
 				var response = {candidates: [response]}
 			for (var i = response.candidates.length - 1; i >= 0; i--) {
@@ -77,7 +74,7 @@ $j(document).ready(function () {
 				if(!candidate.region)
 					candidate.region = {id: search.region, name: $j("select[name=region]").get(0).options[$j("select[name=region]").get(0).options.selectedIndex].text}
 			};
-			// Render results
+			//Result
 			renderTable(response.candidates)
 			console.log(response);
 		});
