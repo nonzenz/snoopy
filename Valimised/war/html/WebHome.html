@@ -8,21 +8,23 @@
 	<link href="mainMenu.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href="print.css" rel="stylesheet" type="text/css" media="print"/>
 	
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="js/main.js"></script>
+	<script src="js/jquery-1.9.1.js"></script>
+
+	<script src="js/proov.js"></script>
 </head>
 
 <body>
 	<script>isMobile()</script>
 	<ul id="menu" class="no-print">
-		<li><a href="WebHome.html" id="Home">Pealeht</a><li>
-		<li><a href="WebStatistika.html" id="Statistika">Statistika</a><li>
-		<li><a href="WebValijale.html" id="Kandidaadid">Kandidaadid</a><li>
-		<li><a href="WebKandidaadid.html" id="Valijale">Valijale</a><li>
-		<li><a href="WebLogi.html" id="Logi">Logi sisse</a><li>
+		<li><a href="javascript:void(0)" id="Home">Pealeht</a><li>
+		<li><a href="javascript:void(0)" id="Statistika">Statistika</a><li>
+		<li><a href="javascript:void(0)" id="Kandidaadid">Kandidaadid</a><li>
+		<li><a href="javascript:void(0)" id="Valijale">Valijale</a><li>
+		<li><a href="javascript:void(0)" id="Logi">Logi sisse</a><li>
 	</ul>
 	
-	<div id="content">
+	<div id="contentContainer">
+		<div class="content">
 			<div id="vasakTOP">
 				<img src="images/pealeht.jpg" alt="Valimine on iga kodaniku õigus ja kohustus!" />
 			</div>
@@ -63,6 +65,7 @@
 				<a href="#">&bull; Uudis 2....</a><br/>
 				<a href="#">&bull; Uudis 2....</a>
 			</div>
+		</div>
 	</div>
 	
 	<div id="footer" class="no-print">
