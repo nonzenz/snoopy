@@ -8,6 +8,7 @@
 	<title>E-valimised - Statistika</title>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 	<script src="http://cdn.oesmith.co.uk/morris-0.4.1.min.js"></script>
 
@@ -27,7 +28,6 @@
 			<div class="content">
 				<div id="suurKast">
 					<h1>E-valimiste statistika</h1>
-					<h2>Häälte jagunemine</h2>
 					<label>Piirkonnad:</label>
 									<select>
 										<option value="0">Eesti</option>
@@ -48,11 +48,11 @@
 										<option value="1">Kandidaat </option>
 										<option value="2">Kandidaat </option>
 										<option value="3">Kandidaat </option>
-									</select> <button type="button">Otsi</button>
+									</select> <button type="button" onClick="simulate()">Otsi</button>
 					
 			
 					<div id="sisu">
-					<h1>Hääletustulemused kogu riigis</h1>
+					<h1>Hääletustulemused</h1>
 					<div id="diagram"></div>
 				
 				
@@ -100,6 +100,7 @@
 						</tr>
 					</table>
 				</div>
+
 					
 						<!--<p>Hääletuste tulemused maakondade lõikes</p>-->
 					<!--<img src="images/estonie23.gif" height="503px" alt="Eesti kaart" />-->
