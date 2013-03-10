@@ -34,6 +34,7 @@ $j(document).ready(function () {
 	$j("#logi").click(function(){
 		$j("#cont").load("WebLogi.html .content");
 	}); 
+	
     
 	function renderTable (candidates) {
 		var tableBody = $j("#candidate-list tbody");
