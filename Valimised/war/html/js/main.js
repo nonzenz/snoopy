@@ -20,13 +20,13 @@ $j(document).ready(function () {
 	isMobile();
     
 	$("#home").click(function(){
-		$("#cont").load("WebHome.html .content");
+		$("#cont").load("html/WebHome.html .content");
 	});
 	$("#statistika").click(function(){
 		$("#cont").load("WebStatistika.html .content");
 	});
 	$("#valijale").click(function(){
-		$("#con").load("WebValijale.html .content");
+		$("#cont").load("html/WebValijale.html .content");
 	});
 	$("#kandidaadid").click(function(){
 		$("#cont").load("WebKandidaadid.html .content");
