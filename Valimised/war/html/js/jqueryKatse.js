@@ -1,4 +1,4 @@
-function validateThis(){
+function validate(){
 		var y = document.getElementById("Erakond").value;
 		var x = document.getElementById("Piirkond").value;
 		if (y == 0) {
