@@ -1,0 +1,267 @@
+
+#wrapper {
+	width:300px;
+	margin-top:5px;
+	overflow:auto;
+}
+body, html {
+	width: 300px;
+	color:#000000;
+	background: #c4eaff url(http://frexpaper.com/wp-content/uploads/2013/02/Blue-vintage-wallpaper-background-19820-background-patterns-others.jpg);
+	font-family: georgia,"Lucida Grande", Geneva, Arial, Verdana, sans-serif;
+	color: white;
+	background-repeat: repeat-y;
+}
+p{
+	margin: 4px;
+}
+p1{
+	margin: 4px;
+	font-size: 14px;
+}
+h1{
+	color: black;
+	font-family: georgia,"Lucida Grande", Geneva, Arial, Verdana, sans-serif;
+	font-weight: bold;
+	font-size: 15px;
+}
+h2{
+	color: white;
+	font-family: georgia,"Lucida Grande", Geneva, Arial, Verdana, sans-serif;
+	font-size: 15px;
+}
+h3{
+	color: black;
+	font-family: georgia,"Lucida Grande", Geneva, Arial, Verdana, sans-serif;
+	font-size: 15px;
+}
+button {
+	background-color: #476BB2;
+	border-radius: 20px;
+}
+img {
+	height:70px;
+	float: left;
+}
+#logo {
+	font-family: georgia,"Lucida Grande", Geneva, Arial, Verdana, sans-serif;
+	color: #FFFFFF;
+	font-size: 30px;
+	font-weight: bolder;
+	margin: 0 auto;
+	line-height: 4px;
+	font-variant: normal;
+}
+#vasakTOP{
+	float:left;
+	background-color:#4396E8;
+	width:100%;
+	height: 350px;
+	margin-top:5px;
+}
+#paremTOP{
+	/*float:right;*/
+	background-color:#4396E8;
+	width:300px;
+	height: 350px;
+	margin-top:5px;
+}
+#vasakTOP img {
+	position: relative;
+	height: 330px;
+	width: 290px;
+	margin: 10px;
+}
+#paremTOP img {
+	position: relative;
+	height: 330px;
+	width: 290px;
+	margin: 10px;
+}
+#Main{
+	float:right;
+	width: 300px;
+	margin-bottom:3px;
+	margin-top:5px;
+	background-color:#4396E8;
+	text-align: left;
+	font-family: georgia,"Lucida Grande", Geneva, Arial, Verdana, sans-serif;
+	line-height: normal;
+}
+#MainVasak{
+	float:left;
+	width:300px;
+	height:530px;
+	margin-bottom:20px;
+	margin-top:5px;
+	background-color:#4396E8;
+	text-align: left;
+	font-family: georgia,"Lucida Grande", Geneva, Arial, Verdana, sans-serif;
+	line-height: normal;
+}
+#MainVasakValija{
+	float:left;
+	width:300px;
+	height:600px;
+	margin-bottom:3px;
+	margin-top:5px;
+	background-color:#4396E8;
+	text-align: left;
+	font-family: georgia,"Lucida Grande", Geneva, Arial, Verdana, sans-serif;
+	line-height: normal;
+}
+#ParemKitsas{
+	float:right;
+	width:300px;
+	height:250px;
+	margin-bottom:2px;
+	margin-top:5px;
+	background-color:#4396E8;
+	text-align: left;
+	font-family: georgia,"Lucida Grande", Geneva, Arial, Verdana, sans-serif;
+	line-height: normal;
+}
+#suurKast{
+	float:left;
+	width:300px;
+	height:600px;
+	margin-bottom:10px;
+	margin-top:5px;
+	background-color:#4396E8;
+	text-align: left;
+	font-family: georgia,"Lucida Grande", Geneva, Arial, Verdana, sans-serif;
+	line-height: normal;
+}
+#suurKastStat{
+	float:left;
+	width:300px;
+	height:600px;
+	margin-bottom:10px;
+	margin-top:5px;
+	background-color:#4396E8;
+	text-align: left;
+	font-family: georgia,"Lucida Grande", Geneva, Arial, Verdana, sans-serif;
+	line-height: normal;
+}
+
+#Main p,h1{
+	padding: 5px;
+}
+#mainMenu{
+	float:right;
+	width:58px;
+	height: 25px;
+	margin: 1px;
+	background-color:#4396E8;
+	font-size: 12px;
+	color: white;
+	text-align: center;
+}
+#nupuTaustSuur{
+	float:right;
+	width:70px;
+	height: 25px;
+	margin: 1px;
+	background-color:#4396E8;
+	font-size: 12px;
+	text-align: center;
+}
+#nupuTaustEritiSuur{
+	float:right;
+	width:100px;
+	height: 25px;
+	margin: 1px;
+	background-color:#4396E8;
+	font-size: 12px;
+	text-align: center;
+}
+#nupuTaustEritiSuur{
+	float:right;
+	width:90px;
+	height: 25px;
+	margin: 1px;
+	background-color:#4396E8;
+	font-size: 12px;
+	text-align: center;
+}
+#nupuTaustKandideeri{
+	float:right;
+	width:80px;
+	height: 25px;
+	margin: 1px;
+	background-color:#4396E8;
+	font-size: 12px;
+	text-align: center;
+}
+#nupuTaustVäike{
+	float:right;
+	width:58px;
+	height: 25px;
+	margin: 1px;
+	background-color:#4396E8;
+	font-size: 12px;
+	text-align: center;
+}
+#nupuTaustMini{
+	float:right;
+	width:38px;
+	height: 25px;
+	margin: 1px;
+	background-color:##4396E8;
+	font-size: 12px;
+	text-align: center;
+}
+#vasakBOTTOM {
+	float:left;
+	background-color:#4396E8;
+	width:300px;
+	height: 150px;
+	margin-top: 5px;
+}
+#paremBOTTOM {
+	float:right;
+	background-color:#4396E8;
+	width:300px;
+	height: 175px;
+	margin-top: 5px;
+}
+#paremBottomValijale {
+	float:right;
+	background-color:#4396E8;
+	width:300px;
+	height: 212px;
+	margin-top: 5px;
+}
+#paremBottomValijale img {
+	/*position: relative;*/
+	height: 204px;
+	width: 290px;
+	margin: 5px;
+}
+#logo p {
+	font-family: georgia,"Lucida Grande", Geneva, Arial, Verdana, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	margin-bottom:40px;
+	color: #FFFF99;
+}
+ul{
+	color:white;
+	font-size:18px;
+}
+#pildiMenuParem{
+	float:right;
+}
+#pildiMenuVasak{
+	float:left;
+}
+#footer{
+	font-size:0.65em;
+	font-weight: normal;
+	text-align:center;
+	clear:both;
+	color: #666666;
+}
+
+
