@@ -36,7 +36,6 @@ public class CandidateServiceImpl implements CandidateService{
 				returnCandidate.setLastName(matchingCandidate.getLastName());
 				returnCandidate.setParty(matchingCandidate.getParty());
 				returnCandidate.setLocation(matchingCandidate.getLocation());
-				returnCandidate.setHasVoted(matchingCandidate.getHasVoted());
 			}
 		}
 		return returnCandidate;

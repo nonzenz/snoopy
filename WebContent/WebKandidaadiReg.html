@@ -5,8 +5,8 @@
 	<link href="css/main.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href="css/mainMenu.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href="css/print.css" rel="stylesheet" type="text/css" media="print"/>
-	<script src="js/jquery-1.9.1.js"></script>
-	<script src="js/main.js"></script>
+	<script src="script/jquery-1.9.1.js"></script>
+	<script src="script/main.js"></script>
 </head>
 
 <body onLoad="redirectCSS()">
@@ -25,30 +25,30 @@
 			<h1>Kandidaadi registreerimine</h1><br/>
 			
 			<p>Piirkond*: 
-				<select id="piir" name="Piirkond*" form="register">
+				<select id="piir" name="location" form="register">
 			  		<option value="0">Vali piirkond.....</option>
 			  		<option value="1">Tallinn</option>
 			  		<option value="2">Tartu</option>
 			  		<option value="3">Pärnu</option>
 			  		<option value="4">Haapsalu</option>
 			  		<option value="5">Paide</option>
-				</select><span id="message">   </span>
+				</select><span id="message"> </span>
 			</p>
 			<p>Erakond*:
-				<select id="era" name="Erakond" form="register">
+				<select id="era" name="party" form="register">
 			  		<option value="0">Vali erakond</option>
 			  		<option value="1">Reformierakond</option>
 			  		<option value="2">Keskerakond</option>
 			  		<option value="3">Üksikkandidaat</option>
-				</select><span id="message2">   </span>
-			</p> <br/>
-				
-			<form id="register" action="candidateReg">
+				</select><span id="message2"> </span>
+			</p> 
+			<br>	
+			<form id="register" action="candidateReg" method="POST">
 				<table>
 					<tbody>
 						<tr>
 							<td><label for="Email">E-mail:</label></td>
-							<td><input id="Email" type="email" maxlength="45" name="Email" type="email" /></td>
+							<td><input maxlength="45" name="email" type="email" /></td>
 						</tr>
 						<tr>
 							<td><label for="Pilt">Vali pilt:</label></td>
@@ -67,13 +67,5 @@
 		
 			
 		</div>
-	</div>
-	<div id="footer" class="no-print">
-	Rakenduses realiseeritud e-valimiste näide on realiseeritud tehnoloogiate praktiseerimise eesmärgil ning ei ole mõeldud reaalsete e-valimiste korraldamiseks. Kokkulangevused reaalse e-valimiste protsessiga on juhuslikud.
-		<br>
-		E-valimised &copy; 2013
-		<br>
-		<a href = "#">Terms of Use</a> | <a href = "#">Privacy Policy</a>
-	</div>
-	
+	</div>	
 </body>
