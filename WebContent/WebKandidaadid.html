@@ -5,21 +5,24 @@
 	<link href="css/main.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href="css/mainMenu.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href="css/print.css" rel="stylesheet" type="text/css" media="print"/>
+	<link type="text/css" href="css/jquery-ui-1.8.13.custom.css" rel="stylesheet">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="js/main.js"></script>
+	<script src="script/main.js"></script>
+	<script type="text/javascript" src="script/tabs.js"></script>
+	<script type="text/javascript" src="script/jquery-ui-1.8.13.custom.min.js"></script>
 	
 	<title>E-valimised - Statistika</title>
 </head>
 
 <body>
 <p style="color:red">Antud rakendus ei ole mõeldud kasutamiseks reaalsetel valimistel.</p>
-	<ul id="menu" class="no-print"> 
-		<li><a href="WebHome.html">Pealeht</a><li>
-		<li><a href="WebStatistika.html">Statistika</a><li>
-		<li><a href="WebKandidaadid.html">Kandidaadid</a><li>
-		<li><a href="WebValijale.html">Valijale</a><li>
-		<li><a href="WebLogi.html">Logi sisse</a><li>
-	</ul>
+	   <ul id="tabs" class="no-print" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-corner-all">
+		<li><a href="#Pealeht">Pealeht</a><li>
+		<li><a href="#Statistika">Statistika</a><li>
+		<li><a href="#Kandidaadid">Kandidaadid</a><li>
+		<li><a href="#Valijale">Valijale</a><li>
+		<li><a href="#Logi sisse">Logi sisse</a><li>
+      </ul>
 
 	<div id="cont">
 		<div class="content">

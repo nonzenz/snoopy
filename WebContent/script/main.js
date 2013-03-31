@@ -22,7 +22,7 @@ function validate(){
 
 $.noConflict();
 jQuery(document).ready(function () {
-    
+    /*
 	jQuery("#home").click(function(){
 		jQuery("#cont").load("WebHome.html .content");
 	});
@@ -41,7 +41,7 @@ jQuery(document).ready(function () {
 	jQuery("#rega").click(function(){
 		jQuery("#cont").load("WebKandidaadiReg.html .content");
 	}); 
-    
+    */
 	function renderTable (candidates) {
 		var tableBody = jQuery("#candidate-list tbody");
 		tableBody.empty();
@@ -55,7 +55,7 @@ jQuery(document).ready(function () {
 		};
 	};
 
-	jQuery(".otsi").click(function () {
+	jQuery(".Otsi").click(function () {
 
 		var searchForm = jQuery("#search-form");
 		var search = {};
