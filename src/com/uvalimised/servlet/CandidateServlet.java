@@ -2,6 +2,7 @@ package com.uvalimised.servlet;
 
 import java.io.IOException;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -80,6 +81,12 @@ public class CandidateServlet extends HttpServlet{
 		}
 		
 		ConnectionManager.closeConnection(); //Sulgeme
+		
+		ServletContext sc = getServletContext();
+	    sc.getRequestDispatcher("/WebKandidaadiReg.html").forward(req, resp);
     }
 
+	public void doGet(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+	}
 }

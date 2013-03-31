@@ -1,7 +1,10 @@
 package com.uvalimised.servlet;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -37,6 +40,16 @@ public class Login extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession(true);
+        User user = new User("Robert", "Val", "robertv", "robert", false);
+        session.setAttribute("user", user);
+        //response.sendRedirect("LoginSuccess.jsp");
+        
+        
+        RequestDispatcher rd = request.getRequestDispatcher("LoginSuccess.jsp");
+        rd.forward(request, response);
+		
+		/*
 		try
         {
             System.out.println("In the Login Servlet");
@@ -44,22 +57,18 @@ public class Login extends HttpServlet {
             user.setUsername(request.getParameter("uname"));
             user.setPassword(request.getParameter("password"));
             user = UserDAO.login(user);
-            if(user.isValid())
-            {
+            if(user.isValid()){
                 HttpSession session = request.getSession(true);
-                session.setAttribute("currentSessionUser",user);
+                user = new User("Robert", "Val", "robertv", "robert", false);
+                session.setAttribute("loggedIn", user);
                 response.sendRedirect("LoginSuccess.jsp");
             }else
                 response.sendRedirect("LoginFailed.jsp");
         } catch (Throwable exc){
             System.out.println(exc);
-        }
+        } */
 	}
 	
-	/**
-	 * 
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	    request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
 	}
 }
