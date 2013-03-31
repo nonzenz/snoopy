@@ -5,20 +5,22 @@
 <head>
 	<title>E-valimised - sinu tuleviku algus!</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
-	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="js/main.js"></script>
+
+	<script type='text/javascript' src="script/jquery-1.9.1.js"></script>
+	<script type='text/javascript' src="script/main.js"></script>
+	<script type='text/javascript' src="script/sorttable.js"></script>
+	<script src="http://cdn.oesmith.co.uk/morris-0.4.1.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 		
 	<script>
-	function redirectCSS() {
-	if (screen.width >= 750)
-	      {document.write("<link href='css/main.css' rel='stylesheet' type='text/css' media='all'>", "<link href='css/mainMenu.css' rel='stylesheet' type='text/css'>");}
-		  	
-	else
-	      {document.write("<link href='css/mobile.css' rel='stylesheet' type='text/css'>", "<link href='css/mainMenu.css' rel='stylesheet' type='text/css'>");
-	      }
-	}
-	redirectCSS() 
+		(function redirectCSS() {
+			if (screen.width >= 750)
+			      {document.write("<link href='css/main.css' rel='stylesheet' type='text/css' media='all'>", "<link href='css/mainMenu.css' rel='stylesheet' type='text/css'>");}
+				  	
+			else
+			      {document.write("<link href='css/mobile.css' rel='stylesheet' type='text/css'>", "<link href='css/mainMenu.css' rel='stylesheet' type='text/css'>");
+			      }
+		})();
 	</script>  
 </head>
 
