@@ -8,7 +8,8 @@
 </head>
 
 <body>
-
+	<div class="hoiatus">Antud rakendus ei ole mõeldud kasutamiseks reaalsetel valimistel!</div>
+	
 	<div id="loginPageContainer">
 	    <a href="loginAuth.jsp" class="button big blue">Logi Sisse</a>
 	    <a href="WebHome.html" class="button big orange">Sisene külalisena</a>
