@@ -12,13 +12,15 @@ public class Candidate implements java.io.Serializable{
 	private String lastName;
 	private String party;
 	private String location;
-	private boolean hasVoted = false;
+	private String email;
+	private String info;
 	
-	public Candidate (String firstName, String lastName, String party, String location){
+	public Candidate (String firstName, String lastName, String party, String location, String email){
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.party = party;
 		this.location = location;
+		this.email = email;
 	}
 	
 	public Candidate(){}
@@ -63,14 +65,22 @@ public class Candidate implements java.io.Serializable{
 		this.location = location;
 	}
 	
-	public boolean getHasVoted(){
-		return hasVoted;
+	public String getEmail() {
+		return email;
 	}
-	
-	public void setHasVoted(boolean voted){
-		this.hasVoted = voted;
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	
+
+	public String getInfo() {
+		return info;
+	}
+
+	public void setInfo(String info) {
+		this.info = info;
+	}
+
 	@Override
 	public boolean equals(Object otherObject) {
 		Candidate other = (Candidate)otherObject;
