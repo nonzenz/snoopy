@@ -108,7 +108,13 @@ a:hover{
 	clear:both;
 }
 
-
+.hoiatus{
+	font-size: 18px;
+	line-height: 15px;
+	background: #990000;
+	text-align: center;
+	padding: 15px 0px 15px 0px;
+}
 
 .button{
 	font:15px Calibri, Arial, sans-serif;
