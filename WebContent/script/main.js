@@ -20,9 +20,10 @@ function validate(){
 	return status;
 };
 
-$.noConflict();
+//$.noConflict();
+
 jQuery(document).ready(function () {
-    /*
+	
 	jQuery("#home").click(function(){
 		jQuery("#cont").load("WebHome.html .content");
 	});
@@ -31,6 +32,7 @@ jQuery(document).ready(function () {
 	});
 	jQuery("#valijale").click(function(){
 		jQuery("#cont").load("WebValijale.html .content");
+		onclickEvent();
 	});
 	jQuery("#kandi").click(function(){
 		jQuery("#cont").load("WebKandidaadid.html .content");
@@ -41,7 +43,23 @@ jQuery(document).ready(function () {
 	jQuery("#rega").click(function(){
 		jQuery("#cont").load("WebKandidaadiReg.html .content");
 	}); 
-    */
+	
+});
+
+jQuery(document).on('click', '.otsi', function() {
+	var searchForm = jQuery("#search-form");
+	var search = {};
+	//Children- property of an Element
+	if(searchForm.children.name.value) {
+		search.name = searchForm.children.name.value;
+	}
+	if(jQuery("select[name=region]").val() != 0) {
+		search.region = jQuery("select[name=region]").val();
+	}
+	if(jQuery("select[name=party]").val() != 0) {
+		search.party = jQuery("select[name=party]").val();
+	}
+	
 	function renderTable (candidates) {
 		var tableBody = jQuery("#candidate-list tbody");
 		tableBody.empty();
@@ -54,48 +72,44 @@ jQuery(document).ready(function () {
 			tableBody.append(candidateRow);
 		};
 	};
-
-	jQuery(".Otsi").click(function () {
-
-		var searchForm = jQuery("#search-form");
-		var search = {};
-		//Children- property of an Element
-		if(searchForm.children.name.value) {
-			search.name = searchForm.children.name.value;
-		}
-		if(jQuery("select[name=region]").val() != 0) {
-			search.region = jQuery("select[name=region]").val();
-		}
-		if(jQuery("select[name=region]").val() != 0) {
-			search.party = jQuery("select[name=party]").val();
-		}
-		var ajaxroute;
-		if(search.region && search.party) {
-			ajaxroute = "http://meievalimised.appspot.com/data/findCandidatesByPartyAndRegion.json";
-		} else if(search.region) {
-			ajaxroute = "http://meievalimised.appspot.com/data/findCandidatesByRegion.json";
-		} else if(search.party) {
-			ajaxroute = "http://meievalimised.appspot.com/data/findCandidatesByParty.json";
-		} else {
-			ajaxroute = "http://meievalimised.appspot.com/data/candidate.json";
-		}
-		// console.log(search, ajaxroute);
-		jQuery.getJSON(ajaxroute, function (response) {
-			if(!response.candidates)
-				var response = {candidates: [response]};
-			for (var i = response.candidates.length - 1; i >= 0; i--) {
-				candidate = response.candidates[i];
-				if(!candidate.party)
-					candidate.party = {id: search.party, name: jQuery("select[name=party]").get(0).options[jQuery("select[name=party]").get(0).options.selectedIndex].text};
-				if(!candidate.region)
-					candidate.region = {id: search.region, name: jQuery("select[name=region]").get(0).options[jQuery("select[name=region]").get(0).options.selectedIndex].text};
-			};
-			//Result
-			renderTable(response.candidates);
-			console.log(response);
-		});
-
-		return false;
+	
+	var ajaxroute;
+	if(search.region && search.party) {
+		ajaxroute = "/ValimisedSnoopy/KandidaadiOtsin";
+	} else if(search.region) {
+		ajaxroute = "/ValimisedSnoopy/KandidaadiOtsin";
+	} else if(search.party) {
+		ajaxroute = "/ValimisedSnoopy/KandidaadiOtsin";
+	} else {
+		ajaxroute = "/ValimisedSnoopy/KandidaadiOtsin";
+	}
+	
+	console.log("Teeme päringu");
+	jQuery.get(ajaxroute, {ringkond : "1", partei: "2"})
+		.always(
+			function(data) {
+				console.log("päringu tulemus");
+				console.log(data.responseText);
+			}
+		);
+	
+	/*
+	jQuery.getJSON(ajaxroute, function (response) {
+		if(!response.candidates)
+			var response = {candidates: [response]};
+		for (var i = response.candidates.length - 1; i >= 0; i--) {
+			candidate = response.candidates[i];
+			if(!candidate.party)
+				candidate.party = {id: search.party, name: jQuery("select[name=party]").get(0).options[jQuery("select[name=party]").get(0).options.selectedIndex].text};
+			if(!candidate.region)
+				candidate.region = {id: search.region, name: jQuery("select[name=region]").get(0).options[jQuery("select[name=region]").get(0).options.selectedIndex].text};
+		};
+		//Result
+		renderTable(response.candidates);
+		console.log(response);
 	});
+	*/
+
+	return false;
 });
 
