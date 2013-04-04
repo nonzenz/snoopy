@@ -2,7 +2,7 @@ package com.uvalimised.data;
 
 /*
  * Candidate Bean object, that defines properties of the Candidate.
- * @Author: Robert Väljur
+ * @Author: Robert VÃ¤ljur
  */
 public class Candidate implements java.io.Serializable{
 

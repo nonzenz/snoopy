@@ -13,7 +13,7 @@
 		"id" : "1234567891",
 		"region" : {
 			"id" : "LA",
-			"name" : "L‰‰nemaa"
+			"name" : "L√§√§nemaa"
 		},
 		"person" : {
 			"id" : "37907034621",
@@ -27,13 +27,13 @@
 		},
 		"person" : {
 			"id" : "37907034622",
-			"name" : "Gerhard G‰tegıverdus"
+			"name" : "Gerhard G√§teg√µverdus"
 		}
 	}, {
 		"id" : "1234567893",
 		"region" : {
 			"id" : "JO",
-			"name" : "Jıgevamaa"
+			"name" : "J√µgevamaa"
 		},
 		"person" : {
 			"id" : "37907034623",
@@ -43,7 +43,7 @@
 		"id" : "1234567894",
 		"region" : {
 			"id" : "PO",
-			"name" : "Pılvamaa"
+			"name" : "P√µlvamaa"
 		},
 		"person" : {
 			"id" : "37907034624",
@@ -53,7 +53,7 @@
 		"id" : "1234567855",
 		"region" : {
 			"id" : "PO",
-			"name" : "Pılvamaa"
+			"name" : "P√µlvamaa"
 		},
 		"person" : {
 			"id" : "37907034625",
@@ -63,17 +63,17 @@
 		"id" : "1234567856",
 		"region" : {
 			"id" : "PO",
-			"name" : "Pılvamaa"
+			"name" : "P√µlvamaa"
 		},
 		"person" : {
 			"id" : "37907034626",
-			"name" : "Kıikme Kannatameƒra"
+			"name" : "K√µikme Kannatame√§ra"
 		}
 	}, {
 		"id" : "1234567857",
 		"region" : {
 			"id" : "PO",
-			"name" : "Pılvamaa"
+			"name" : "P√µlvamaa"
 		},
 		"person" : {
 			"id" : "37907034627",

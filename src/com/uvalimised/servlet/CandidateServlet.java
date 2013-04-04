@@ -29,7 +29,7 @@ public class CandidateServlet extends HttpServlet{
 	@Override
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-		//Proovime ühendada
+		//Proovime Ã¼hendada
 		ConnectionManager.getConnection();
 		
 		// loome rangelt aktiivse kasutaja
@@ -49,7 +49,7 @@ public class CandidateServlet extends HttpServlet{
 				else if (partySelectValue == "2"){
 					party = "Keskerakond";
 				} else {
-					party = "Üksikkandidaat";
+					party = "Ãœksikkandidaat";
 				}
 			} else {
 				throw new Exception("Erakond valimata!");
@@ -64,7 +64,7 @@ public class CandidateServlet extends HttpServlet{
 					loc = "Tartu";
 				} 
 				else if (locationSelectValue == "3"){
-					loc = "Pärnu";
+					loc = "PÃ¤rnu";
 				}
 				else if (locationSelectValue == "4"){
 					loc = "Haapsalu";

@@ -75,13 +75,13 @@ jQuery(document).on('click', '.otsi', function() {
 	
 	var ajaxroute;
 	if(search.region && search.party) {
-		ajaxroute = "/ValimisedSnoopy/KandidaadiOtsin";
+		ajaxroute = "/ValimisedSnoopy/CandidateSearch";
 	} else if(search.region) {
-		ajaxroute = "/ValimisedSnoopy/KandidaadiOtsin";
+		ajaxroute = "/ValimisedSnoopy/CandidateSearch";
 	} else if(search.party) {
-		ajaxroute = "/ValimisedSnoopy/KandidaadiOtsin";
+		ajaxroute = "/ValimisedSnoopy/CandidateSearch";
 	} else {
-		ajaxroute = "/ValimisedSnoopy/KandidaadiOtsin";
+		ajaxroute = "/ValimisedSnoopy/CandidateSearch";
 	}
 	
 	console.log("Teeme päringu");
@@ -90,6 +90,7 @@ jQuery(document).on('click', '.otsi', function() {
 			function(data) {
 				console.log("päringu tulemus");
 				console.log(data.responseText);
+				//jQuery.parseJSON( jsonString );
 			}
 		);
 	
