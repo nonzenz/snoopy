@@ -14,8 +14,8 @@
 		<p> Teie piirkond: Harjumaa</p>
 		<p> Olete võtmas osa 2013. aasta hääletusest. </p><br/>
 		<p> Olete oma hääle andnud kandidaadile: Nimi/Häält pole veel antud. </p><br/><br/>
-		<div id="mainMenu"><a href="WebLogiValik.html"><button> Hääleta </button></a></div> 
-		<div id="mainMenu"><a href="WebLogiEsitaKandidatuur.html"><button> Esita </button></a></div>
+		<div id="mainMenu"><a href="WebH22leta.html"><button> Hääleta </button></a></div> 
+		<div id="mainMenu"><a href="WebKandidaadiReg.html"><button> Kandideeri </button></a></div>
 		<div id="mainMenu"><a href="WebLogiH22leTyhistus.html"><button> Tühista hääl </button></a></div>
 	</div>
 	

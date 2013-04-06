@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 
 <head>
+	<title>E-valimised - Statistika</title>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
 	<link href="css/main.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href="css/mainMenu.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href="css/print.css" rel="stylesheet" type="text/css" media="print"/>
-	<title>E-valimised - Statistika</title>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="script/jquerty-1.9.1.js"></script>
 	<script src="script/main.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-	<script src="http://cdn.oesmith.co.uk/morris-0.4.1.min.js"></script>
 	<script src="script/sorttable.js"></script>
-	<link type="text/css" href="css/jquery-ui-1.8.13.custom.css" rel="stylesheet">
+	<!--  <link type="text/css" href="css/jquery-ui-1.8.13.custom.css" rel="stylesheet">-->
 
 </head>
 
@@ -29,109 +27,100 @@
 			<div class="content">
 				<div id="suurKast">
 					<h1>E-valimiste statistika</h1><br/>
-					<label>Piirkonnad:</label>
+					<label>Riik/ringkond:</label>
 									<select>
-										<option value="0">Eesti</option>
-										<option value="1">Valimisringkond </option>
-										<option value="2">Valimisringkond </option>
-										<option value="3">Valimisringkond </option>
+										<option value="0">Kogu riik</option>
+										<option value="1">Harjumaa </option>
+										<option value="2">Pärnumaa </option>
+										<option value="3">Tartumaa </option>
+										<option value="3">Võrumaa </option>
+										<option value="3">Valgamaa </option>
 									</select>
-					<label>Parteid:</label>
+					<label>Isik/erakond:</label>
 									<select>
-										<option value="0">Kõik parteid</option>
-										<option value="1">Partei </option>
-										<option value="2">Partei </option>
-										<option value="3">Partei </option>
+										<option value="0">Erakondade kaupa</option>
+										<option value="1">Isikute kaupa </option>
 									</select>
-					<label>Kandidaadid:</label>
-									<select>
-										<option value="0">Kõik kandidaadid</option>
-										<option value="1">Kandidaat </option>
-										<option value="2">Kandidaat </option>
-										<option value="3">Kandidaat </option>
-									</select>
-									 <button type="button">Otsi</button>
+									 <input id="myButton" type="button" class="otsi" value="Otsi">
 									 <br/><br/>
 					
 			
-					<div id="sisu">
+					
 					<h1>Hääletustulemused</h1><br/>
-					<div id="diagram"></div>
 				
-				
-					<script type="text/javascript">
-					Morris.Bar({
-						  element: 'diagram',
-						  data: [
-						    { y: 'Reformierakond', a: 40 },
-						    { y: 'Keskerakond', a: 30 },
-						    { y: 'SDE', a: 20 },
-						    { y: 'IRL', a: 10 }
-						  ],
-						  xkey: 'y',
-						  ykeys: 'a',//['a', 'b'],
-						  labels: ['Series A']
-						});
-				
-					</script>
 					<div id="tabeliDiv">
 					<table id="tabel" class="sortable" >
 						<thead><tr><th>Erakond</th><th>Hääli</th><th>Osakaal</th></tr></thead>
 						
 						<tr>
-							<td>Reformierakond</td>
-							<td>4000</td>		
-							<td>40%</td>
+							<td>Kollased</td>
+							<td>17</td>		
+							<td>8%</td>
 						</tr>
 						<tr>
-							<td>Keskerakond</td>
-							<td>3000</td>		
-							<td>30%</td>
+							<td>Punased</td>
+							<td>11</td>		
+							<td>5%</td>
 						</tr>
 						<tr>
-							<td>SDE</td>
-							<td>2000</td>		
-							<td>20%</td>
+							<td>Rohelised</td>
+							<td>12</td>		
+							<td>6%</td>
 						</tr>
 						<tr>
-							<td>IRL</td>
-							<td>1000</td>		
-							<td>10%</td>
+							<td>Sinised</td>
+							<td>36</td>		
+							<td>17%</td>
 						</tr>
 					</table>
 				</div> <br/><br/>
 				
+				
 				<div id="tabeliDiv">
 					<table id="tabel" class="sortable" >
-						<thead><tr><th>Kandidaat</th><th>Hääli</th></tr></thead>
+						<thead><tr><th>Isik</th><th>Erakond</th><th>Hääli</th><th>Osakaal</th></tr></thead>
 						
 						<tr>
-							<td>Magdalena Malejeva</td>
-							<td>234</td>		
+							<td>Mati Kollane</td>
+							<td>Kollased</td>
+							<td>13</td>	
+							<td>6%</td>		
 						</tr>
 						<tr>
-							<td>Eduard Ekskavaator</td>
-							<td>334</td>		
+							<td>Kris Sinine</td>
+							<td>Sinised</td>
+							<td>11</td>	
+							<td>5%</td>	
 						</tr>
 						<tr>
-							<td>Ferdinand Fuksia</td>
-							<td>220</td>		
+							<td>Liis Punane</td>
+							<td>Punased</td>
+							<td>15</td>	
+							<td>7%</td>		
 						</tr>
 						<tr>
-							<td>Gerhard Gätegõverdus</td>
-							<td>103</td>		
+							<td>Gert Roheline</td>
+							<td>Rohelised</td>
+							<td>11</td>
+							<td>5%</td>			
 						</tr>
 						<tr>
-							<td>Harald Hamster</td>
-							<td>123</td>		
+							<td>Liina Sinine</td>
+							<td>Sinised</td>
+							<td>11</td>
+							<td>5%</td>			
 						</tr>
 						<tr>
-							<td>Ildegaard Ilumeel</td>
-							<td>345</td>		
+							<td>Erki Punane</td>
+							<td>Punased</td>
+							<td>17</td>	
+							<td>8%</td>		
 						</tr>
 						<tr>
-							<td>Janaida Jalutova</td>
-							<td>543</td>		
+							<td>Karl Kollane</td>
+							<td>Kollased</td>
+							<td>15</td>	
+							<td>7%</td>		
 						</tr>
 					</table>
 				</div>
@@ -142,7 +131,6 @@
 		
 				</div>
 			</div>
-		</div>
 	</div>
 		<div id="footer" class="no-print">
 		Rakenduses realiseeritud e-valimiste näide on realiseeritud tehnoloogiate praktiseerimise eesmärgil ning ei ole mõeldud reaalsete e-valimiste korraldamiseks. Kokkulangevused reaalse e-valimiste protsessiga on juhuslikud.
