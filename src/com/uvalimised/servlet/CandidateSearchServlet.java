@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.uvalimised.DAO.ConnectionManager;
+
 /**
  * Servlet implementation class MainServlet
  *  * CandidateSearchServlet
@@ -30,24 +32,37 @@ public class CandidateSearchServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("application/json");
-	    response.setCharacterEncoding("UTF-8");
+	    response.setCharacterEncoding("UTF-8"); 
+	    PrintWriter out = response.getWriter();
 	    
-	    String ringkond = request.getParameter("ringkond");
-	    String partei = request.getParameter("partei");
+	   /** try {
+			//connecting to the DB
+			currentCon = ConnectionManager.getConnection();
+			stmt=currentCon.createStatement();
+			rs = stmt.executeQuery(searchQuery);
+			boolean userExists = rs.next();
+			*/
 	    
-	    
-	    
+	   String region = request.getParameter("Region");
+	   String party = request.getParameter("Party");
+	   
+	   
 	    /*andmebaasist tulevad andmed, teen päringu vahel
 	     * töötlen andmed nii nagu mul neid vaja on jsonitena
 	    */
-	    response.getWriter().write("{ id : 1 }"); 
+	   
+	   //jQuery.parseJSON( jsonString );
+	   response.getWriter().write("{ id : 1 }"); 
+	   //var json = JSON.stringify(myObj);
+	   //alert(json);
 	    
 	}
+
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	}
-
+	
 }

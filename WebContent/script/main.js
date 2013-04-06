@@ -37,8 +37,8 @@ jQuery(document).ready(function () {
 	jQuery("#kandi").click(function(){
 		jQuery("#cont").load("WebKandidaadid.html .content");
 	});
-	jQuery("#logi").click(function(){
-		jQuery("#cont").load("WebLogi.html .content");
+	jQuery("#h22leta").click(function(){
+		jQuery("#cont").load("WebH22leta.html .content");
 	});
 	jQuery("#rega").click(function(){
 		jQuery("#cont").load("WebKandidaadiReg.html .content");

@@ -1,3 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+	<link href="css/main.css" rel="stylesheet" type="text/css" media="all"/>
+	<link href="css/mainMenu.css" rel="stylesheet" type="text/css" media="all"/>
+	<link href="css/print.css" rel="stylesheet" type="text/css" media="print"/>
+	<title>E-valimised - Valijale</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="script/main.js"></script>
+	<link type="text/css" href="css/jquery-ui-1.8.13.custom.css" rel="stylesheet">
+</head>
+
+<body onLoad="redirectCSS()">
+<p style="color:red">Antud rakendus ei ole mõeldud kasutamiseks reaalsetel valimistel.</p>
+	  <ul id="menu" class="no-print"> 
+		<li><a href="WebHome.html">Pealeht</a><li>
+		<li><a href="WebStatistika.html">Statistika</a><li>
+		<li><a href="WebKandidaadid.html">Kandidaadid</a><li>
+		<li><a href="WebValijale.html">Valijale</a><li>
+		<li><a href="WebH22leta.html">Hääleta</a><li>
+	</ul>
+
 <div class="content">
 	<div id="suurKast">
 		<h2><a href="WebKandidaadiReg.html">Kandideeri</a></h2>
@@ -6,22 +30,25 @@
 
 			<div id="search-form">
 				<select name="region" id="sorting">
-					<option value="0">K�ik valimisringkonnad</option>
+					<option value="0">Kõik valimisringkonnad</option>
 					<option value="1">Valimisringkond 1</option>
 					<option value="2">Valimisringkond 2</option>
 				</select>
 				<select name="party">
-					<option value="0">K�ik parteid</option>
+					<option value="0">Kõik parteid</option>
 					<option value="1">Partei 1</option>
 					<option value="2">Partei 2</option>
 				</select>
 				
+				<form id ="myAjaxRequestForm"></form>
+				<label for="candidateName"> Sisesta nimi: </label><br/>
+				<input id="candidateName" type="text" name="candidateName" />
 				<input type="text" placeholder="Sisesta nimi">
 				
-				<input type="button" class="otsi" value="Otsi">
+				<input id="myButton" type="button" class="otsi" value="Otsi">
+		
 			</div>
-			<br/>		
-				
+			<br/>	
 			<div style="border:1px solid #ccc;padding:5px;">
 				<table id="candidate-list">
 					<thead>
