@@ -12,17 +12,17 @@ import com.uvalimised.data.User;
  *
  */
 public class UserDAO {
-	static Connection currentCon = null;
+	static Connection con = null;
 	static ResultSet rs = null;
 	public static User login(User bean){
 		Statement stmt = null;
 		String username = bean.getUsername();
 		String password = bean.getPassword();
-		String searchQuery = "select * from users where uname='" + username + "' AND password='" + password + "'";
+		String searchQuery = "SELECT * FROM users WHERE uname='" + username + "' AND password='" + password + "'";
 		try {
 			//connecting to the DB
-			currentCon = ConnectionManager.getConnection();
-			stmt=currentCon.createStatement();
+			con = ConnectionManager.getConnection();
+			stmt = con.createStatement();
 			rs = stmt.executeQuery(searchQuery);
 			boolean userExists = rs.next();
 		 
@@ -31,17 +31,24 @@ public class UserDAO {
 				bean.setValid(false);
 				}
 			else if (userExists) {
-				String firstName = rs.getString("FirstName");
-				String lastName = rs.getString("LastName");
+				String firstName = rs.getString("firstname");
+				String lastName = rs.getString("lastname");
+				Boolean candidated = rs.getBoolean("iscandidate");
+				Boolean voted = rs.getBoolean("hasvoted");
+				//String SocialID = rs.getString("socialID");
+				
 				System.out.println("Welcome " + firstName);
 				bean.setFirstName(firstName);
 				bean.setLastName(lastName);
+				bean.setHasVoted(voted);
+				bean.setIsCandidate(candidated);
 				bean.setValid(true);
 				}
 			}
 		catch (Exception ex){
 			System.out.println("Log In failed: An Exception has occurred! " + ex);
 			}
+		ConnectionManager.closeConnection();
 		return bean;
 		}
 }

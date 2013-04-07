@@ -28,28 +28,13 @@ public class Login extends HttpServlet {
     public Login() {
         super();
     }
-
-	/**
-	 * @see Servlet#init(ServletConfig)
-	 */
-	public void init(ServletConfig config) throws ServletException {
-		//this.userDAO = Config.getInstance(getServletContext()).getDAOFactory().getUserDAO();
-	}
-
+    
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession(true);
-        User user = new User("Robert", "Val", "robertv", "robert", false);
-        session.setAttribute("user", user);
-        //response.sendRedirect("LoginSuccess.jsp");
-        
-        
-        RequestDispatcher rd = request.getRequestDispatcher("LoginSuccess.jsp");
-        rd.forward(request, response);
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {	
 		
-		/*
 		try
         {
             System.out.println("In the Login Servlet");
@@ -59,14 +44,16 @@ public class Login extends HttpServlet {
             user = UserDAO.login(user);
             if(user.isValid()){
                 HttpSession session = request.getSession(true);
-                user = new User("Robert", "Val", "robertv", "robert", false);
-                session.setAttribute("loggedIn", user);
+                session.setAttribute("user", user);
                 response.sendRedirect("LoginSuccess.jsp");
+                return;
             }else
-                response.sendRedirect("LoginFailed.jsp");
+                response.sendRedirect("loginAuth.jsp");
+            	return;
         } catch (Throwable exc){
             System.out.println(exc);
-        } */
+        } 
+		
 	}
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

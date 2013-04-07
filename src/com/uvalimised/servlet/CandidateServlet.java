@@ -1,13 +1,17 @@
 package com.uvalimised.servlet;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.uvalimised.DAO.ConnectionManager;
 import com.uvalimised.data.Candidate;
@@ -30,10 +34,17 @@ public class CandidateServlet extends HttpServlet{
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 		//Proovime ühendada
-		ConnectionManager.getConnection();
+		Connection con = ConnectionManager.getConnection();
 		
-		// loome rangelt aktiivse kasutaja
-		User user = new User("Robert", "Val", "robertv", "robert", false);
+		// Kontrollime, kas kasutaja on sisse logitud. Kui ei ole, suunab vastavale veateatele.
+		HttpSession session = req.getSession();
+		if (session.getAttribute("user") == null){
+			resp.sendRedirect("notloggedin.jsp");
+			return;
+		}
+		
+		User user = (User) session.getAttribute("user");
+		Candidate candidate = new Candidate();
 		
 		// Seame kandidaadi andmed
 		// Hetkel Faile ei valideeri ja uploadi, tuleb hiljem!
@@ -75,11 +86,33 @@ public class CandidateServlet extends HttpServlet{
 				throw new Exception("Piirkond valimata!");
 			}
 			
-			Candidate candidate = new Candidate(user.getFirstName(), user.getLastName(), party, loc, req.getParameter("email"));
+			candidate = new Candidate(user.getFirstName(), user.getLastName(), party, loc, req.getParameter("email"));
 		} catch (Exception ex){
 			System.out.println(ex);
 		}
 		
+		
+		//Inserting data into table
+		if (candidate.getFirstName() != null){
+			try{
+				PreparedStatement statement= con.prepareStatement("INSERT INTO candidates(firstname, lastname, party," +
+						"location, email) VALUES (?, ?, ?, ?, ?)");
+				statement.setString(1, candidate.getFirstName());
+				statement.setString(2, candidate.getLastName());
+				statement.setString(3, candidate.getParty());
+				statement.setString(4, candidate.getLocation());
+				statement.setString(5, candidate.getEmail());
+				//statement.setString(6, candidate.getInfo());
+				//statement.setString(7, candidate.getPicture());
+				
+				statement.addBatch();
+				statement.executeBatch();
+				statement.close();
+			} catch (Exception ex){
+				System.out.println("Viga andmete andmebaasi sisestamisel!");
+			}
+		}
+
 		ConnectionManager.closeConnection(); //Sulgeme
 		
 		ServletContext sc = getServletContext();
@@ -89,4 +122,5 @@ public class CandidateServlet extends HttpServlet{
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 	}
+	
 }

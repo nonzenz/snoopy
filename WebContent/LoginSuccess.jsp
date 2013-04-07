@@ -12,11 +12,24 @@
 		<p> TERE TULEMAST!</p><br/>
 		<p> Teie nimi: <c:out value="${user.firstName} ${user.lastName}" /></p>  
 		<p> Teie piirkond: Harjumaa</p>
-		<p> Olete võtmas osa 2013. aasta hääletusest. </p><br/>
-		<p> Olete oma hääle andnud kandidaadile: Nimi/Häält pole veel antud. </p><br/><br/>
-		<div id="mainMenu"><a href="WebH22leta.html"><button> Hääleta </button></a></div> 
-		<div id="mainMenu"><a href="WebKandidaadiReg.html"><button> Kandideeri </button></a></div>
-		<div id="mainMenu"><a href="WebLogiH22leTyhistus.html"><button> Tühista hääl </button></a></div>
+		<c:choose>
+			<c:when test="${user.isCandidate == true}">
+				<p> Olete kandideerinud 2013. aasta hääletusel. </p><br/>
+			</c:when>
+			<c:otherwise>
+				<p> Te ei ole veel kandideerinud! </p> <div id="mainMenu"><a href="WebKandidaadiReg.html"><button> Kandideeri </button></a></div><br/>
+			</c:otherwise>
+		</c:choose>
+		<c:choose>
+			<c:when test="${user.hasVoted == true}">
+				<p> Olete juba hääletanud. </p><br/>
+				<div id="mainMenu"><a href="WebLogiH22leTyhistus.html"><button> Soovite häält tühistada? </button></a></div>
+			</c:when>
+			<c:otherwise>
+				<p> Te ei ole veel hääletanud! </p><br/>
+				<div id="mainMenu"><a href="WebH22leta.html"><button> Hääleta </button></a></div> 
+			</c:otherwise>
+		</c:choose>
 	</div>
 	
 	<div id="footer">

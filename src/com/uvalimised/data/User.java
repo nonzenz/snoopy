@@ -7,8 +7,9 @@ public class User implements java.io.Serializable{
 	private String lastName;
 	private String username;
 	private String password;
-	public boolean valid;
+	public boolean isCandidate;
 	private boolean hasVoted = false;
+	private boolean isValid;
 	
 	public User(){}
 	
@@ -50,16 +51,25 @@ public class User implements java.io.Serializable{
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public boolean isHasVoted() {
+	public boolean getHasVoted() {
 		return hasVoted;
 	}
 	public void setHasVoted(boolean hasVoted) {
 		this.hasVoted = hasVoted;
 	}
+	public boolean getIsCandidate() {
+		return isCandidate;
+	}
+	public void setIsCandidate(boolean isCandidate) {
+		this.isCandidate = isCandidate;
+	}
+
 	public boolean isValid() {
-		return valid;
+		return isValid;
 	}
-	public void setValid(boolean valid) {
-		this.valid = valid;
+
+	public void setValid(boolean isValid) {
+		this.isValid = isValid;
 	}
+	
 }
