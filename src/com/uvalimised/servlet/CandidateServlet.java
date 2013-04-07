@@ -92,11 +92,10 @@ public class CandidateServlet extends HttpServlet{
 		}
 		
 		
-		//Inserting data into table
-		if (candidate.getFirstName() != null){
+		// Andmebaasides toimetamine
+		if (user.isCandidate == false){
 			try{
-				PreparedStatement statement= con.prepareStatement("INSERT INTO candidates(firstname, lastname, party," +
-						"location, email) VALUES (?, ?, ?, ?, ?)");
+				PreparedStatement statement= con.prepareStatement("INSERT INTO candidates (firstname, lastname, party, location, email) VALUES (?, ?, ?, ?, ?)");
 				statement.setString(1, candidate.getFirstName());
 				statement.setString(2, candidate.getLastName());
 				statement.setString(3, candidate.getParty());
@@ -105,11 +104,18 @@ public class CandidateServlet extends HttpServlet{
 				//statement.setString(6, candidate.getInfo());
 				//statement.setString(7, candidate.getPicture());
 				
-				statement.addBatch();
-				statement.executeBatch();
+				statement.executeUpdate();
 				statement.close();
+				user.setIsCandidate(true);
+				
+				PreparedStatement st2 = con.prepareStatement("INSERT INTO users (iscandidate) VALUES (?) WHERE uname='" + user.getUsername() + "'");
+				st2.setBoolean(1, user.getIsCandidate());
+				st2.executeUpdate();
+				st2.close();
+				
 			} catch (Exception ex){
 				System.out.println("Viga andmete andmebaasi sisestamisel!");
+				System.out.println(ex);
 			}
 		}
 
