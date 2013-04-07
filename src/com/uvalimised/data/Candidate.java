@@ -23,6 +23,7 @@ public class Candidate implements java.io.Serializable{
 		this.email = email;
 	}
 	
+	
 	public Candidate(){}
 	
 	public Long getId(){

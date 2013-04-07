@@ -1,8 +1,11 @@
 package com.uvalimised.servlet;
 
-import java.io.IOException;
+import java.io.IOException; 
+import java.sql.Connection;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 
+import javax.naming.NamingException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -31,32 +34,45 @@ public class CandidateSearchServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String party_id = request.getParameter("party_id");
+		String location_id = request.getParameter("location_id");
+		String firstname = request.getParameter("firstname");	
+		String lastname = request.getParameter("lastname");	
+		String jsonresponse;
+		DataF datafetcher = null;
+		/**ArrayList<Candidate> candidateList = null;
+		Gson gson = new GsonBuilder().create();
+
+		try {
+			datafetcher = new DataF(getServletContext());
+			if (party_id!=null && location_id!=null) {
+				candidateList = datafetcher.getCandidatesByPartyAndRegion(party_id,location_id);
+			} else if (party_id!=null) {
+				candidateList = datafetcher.getCandidatesByParty(party_id);
+			} else if (location_id!=null) {
+				candidateList = datafetcher.getCandidatesByRegion(location_id);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NamingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		*/
+		//CandidateList list = new CandidateList(candidateList);
+		//jsonresponse = gson.toJson(list);
+		//response.getWriter().write(jsonresponse);
 		response.setContentType("application/json");
-	    response.setCharacterEncoding("UTF-8"); 
-	    PrintWriter out = response.getWriter();
-	    
-	   /** try {
-			//connecting to the DB
-			currentCon = ConnectionManager.getConnection();
-			stmt=currentCon.createStatement();
-			rs = stmt.executeQuery(searchQuery);
-			boolean userExists = rs.next();
-			*/
-	    
-	   String region = request.getParameter("Region");
-	   String party = request.getParameter("Party");
-	   
-	   
-	    /*andmebaasist tulevad andmed, teen päringu vahel
-	     * töötlen andmed nii nagu mul neid vaja on jsonitena
-	    */
-	   
-	   //jQuery.parseJSON( jsonString );
-	   response.getWriter().write("{ id : 1 }"); 
-	   //var json = JSON.stringify(myObj);
-	   //alert(json);
-	    
+		response.setCharacterEncoding("UTF-8"); 
+		//response.getWriter().write(jsonresponse);
+		PrintWriter out = response.getWriter();
 	}
+
+	   //Proovid
+	   //String region = request.getParameter("Region");
+	   //String party = request.getParameter("Party");
+	   //response.getWriter().write("{ id : 1 }");
 
 
 	/**
