@@ -3,4 +3,26 @@
   <welcome-file-list>
     <welcome-file>front.jsp</welcome-file>
   </welcome-file-list>
+  
+  <servlet>
+        <servlet-name>CandidateSearchServlet</servlet-name>
+        <servlet-class>com.uvalimised.servlet.CandidateSearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CandidateSearchServlet</servlet-name>
+        <url-pattern>/CandidateSearch</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>SuggestServlet</servlet-name>
+        <servlet-class>com.uvalimised.servlet.SuggestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SuggestServlet</servlet-name>
+        <url-pattern>/SuggestServlet</url-pattern>
+    </servlet-mapping>
+    
+    
+    
 </web-app>
+

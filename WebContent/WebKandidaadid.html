@@ -9,8 +9,12 @@
 	<title>E-valimised - Valijale</title>
 	<!--  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<link type="text/css" href="css/jquery-ui-1.8.13.custom.css" rel="stylesheet">  -->
-	<script src="script/jquerty-1.9.1.js"></script>
+	<script src="script/jquery-1.9.1.js"></script>
 	<script src="script/main.js"></script>
+	<script src="script/search.js"></script>
+	<script src="script/suggest.js"></script>
+	<script src="script/jquery-ui.js"></script>
+	<link type="text/css" href="css/autocss.css" rel="stylesheet">
 	
 </head>
 
@@ -33,7 +37,7 @@
 		
 
 			<div id="search-form">
-				<select name="region" id="sorting">
+				<select name="region" id="area">
 					<option value="0">Kõik ringkonnad</option>
 					<option value="1">Harjumaa</option>
 					<option value="2">Pärnumaa </option>
@@ -41,7 +45,7 @@
 					<option value="4">Võrumaa </option>
 					<option value="5">Valgamaa </option>
 				</select>
-				<select name="party">
+				<select name="party" id="party">
 					<option value="0">Kõik erakonnad</option>
 					<option value="1">Kollased </option>
 					<option value="2">Punased </option>
@@ -50,8 +54,8 @@
 					
 
 				</select>
-				<input type="text" placeholder="Sisesta nimi">
-				<input id="myButton" type="button" class="otsi" value="Otsi">
+				<input type="text" placeholder="Sisesta nimi" onfocus="suggest()" id="name">
+				<input id="myButton" type="button" class="otsi" onclick= "otsi()" value="Otsi">
 		
 			</div>
 			

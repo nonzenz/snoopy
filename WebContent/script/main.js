@@ -75,16 +75,16 @@ jQuery(document).on('click', '.otsi', function() {
 	
 	var ajaxroute;
 	if(search.region && search.party) {
-		ajaxroute = "/ValimisedSnoopy/CandidateSearch";
+		ajaxroute = "/CandidateSearch";
 	} else if(search.region) {
-		ajaxroute = "/ValimisedSnoopy/CandidateSearch";
+		ajaxroute = "/CandidateSearch";
 	} else if(search.party) {
-		ajaxroute = "/ValimisedSnoopy/CandidateSearch";
+		ajaxroute = "/CandidateSearch";
 	} else {
-		ajaxroute = "/ValimisedSnoopy/CandidateSearch";
+		ajaxroute = "/CandidateSearch";
 	}
 	
-	console.log("Teeme päringu");
+	/**console.log("Teeme päringu");
 	jQuery.get(ajaxroute, {ringkond : "1", partei: "2"})
 		.always(
 			function(data) {
@@ -93,8 +93,9 @@ jQuery(document).on('click', '.otsi', function() {
 				//jQuery.parseJSON( jsonString );
 			}
 		);
+		*/
 	
-	/*
+	/**
 	jQuery.getJSON(ajaxroute, function (response) {
 		if(!response.candidates)
 			var response = {candidates: [response]};
@@ -109,8 +110,8 @@ jQuery(document).on('click', '.otsi', function() {
 		renderTable(response.candidates);
 		console.log(response);
 	});
+	
 	*/
-
 	return false;
 });
 
