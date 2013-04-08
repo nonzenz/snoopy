@@ -11,7 +11,7 @@ import com.google.gson.GsonBuilder;
 import com.uvalimised.DAO.ConnectionManager;
 import com.uvalimised.data.Candidate;
 
-@WebServlet("/SuggestServlet")
+@WebServlet("/Suggest")
 public class SuggestServlet extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;

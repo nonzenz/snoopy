@@ -4,7 +4,7 @@ function suggest() {
 		source : function(request, response) {
 			$.ajax({
 				type : 'GET',
-				url : "/SuggestServlet",
+				url : "/Suggest",
 				dataType : "json",
 				data : {
 					"Name" : request.term

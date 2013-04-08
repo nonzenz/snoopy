@@ -19,7 +19,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>SuggestServlet</servlet-name>
-        <url-pattern>/SuggestServlet</url-pattern>
+        <url-pattern>/Suggest</url-pattern>
     </servlet-mapping>
     
     
