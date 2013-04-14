@@ -11,8 +11,9 @@
 	<div class="hoiatus">Antud rakendus ei ole mõeldud kasutamiseks reaalsetel valimistel!</div>
 	
 	<div id="loginPageContainer">
-	    <a href="loginAuth.jsp" class="button big blue">Logi Sisse</a>
-	    <a href="WebHome.html" class="button big orange">Sisene külalisena</a>
+		<form name="fm" action="FBauth" method="get"></form>
+		<a onClick="javascript:fm.submit()" class="button big blue">Logi Sisse</a>
+		<a href="WebHome.html" class="button big orange">Sisene külalisena</a>
 	</div>
 	
 	<p class="note">Soovitame kasutada Chrome'i või Safari brauserit.</p>

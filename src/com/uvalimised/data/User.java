@@ -10,8 +10,15 @@ public class User implements java.io.Serializable{
 	public boolean isCandidate;
 	private boolean hasVoted = false;
 	private boolean isValid;
+	private String email;
 	
 	public User(){}
+	
+	public User(String fn, String ln, String email){
+		this.lastName = ln;
+		this.firstName = fn;
+		this.email = email;
+	}
 	
 	public User(String fn, String ln, String un, String pw, boolean voted){
 		this.lastName = ln;
@@ -70,6 +77,14 @@ public class User implements java.io.Serializable{
 
 	public void setValid(boolean isValid) {
 		this.isValid = isValid;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 }
