@@ -75,13 +75,13 @@ jQuery(document).on('click', '.otsi', function() {
 	
 	var ajaxroute;
 	if(search.region && search.party) {
-		ajaxroute = "/CandidateSearch";
+		ajaxroute = "/candSearch";
 	} else if(search.region) {
-		ajaxroute = "/CandidateSearch";
+		ajaxroute = "/candSearch";
 	} else if(search.party) {
-		ajaxroute = "/CandidateSearch";
+		ajaxroute = "/candSearch";
 	} else {
-		ajaxroute = "/CandidateSearch";
+		ajaxroute = "/candSearch";
 	}
 	
 	/**console.log("Teeme päringu");

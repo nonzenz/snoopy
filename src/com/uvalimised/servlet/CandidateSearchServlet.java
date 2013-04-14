@@ -27,7 +27,7 @@ import com.uvalimised.DAO.ConnectionManager;
  *  * CandidateSearchServlet
  *  * @author Helina
  */
-@WebServlet("/CandidateSearch")
+@WebServlet("/candSearch")
 public class CandidateSearchServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
