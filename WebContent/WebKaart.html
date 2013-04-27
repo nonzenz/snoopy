@@ -9,6 +9,7 @@
 	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>  -->
 	<script src="script/main.js"></script>
 	<link type="text/css" href="css/jquery-ui-1.8.13.custom.css" rel="stylesheet">
+	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAyIK-iw86jMLaOMSZmWLZM5s-j_8ru0lw&sensor=false"></script>
 </head>
 
 <body>
@@ -24,36 +25,9 @@
 	
 	<div class="content">
 		<div id="suurKast">
-		<h1>Hääleta</h1><br/>
-					<label>Valimisringkonnad:</label> <br/>
-									<select> 
-										<option value="0">Valimisringkond</option>
-										<option value="1">Harjumaa </option>
-										<option value="2">Pärnumaa </option>
-										<option value="3">Tartumaa </option>
-										<option value="3">Võrumaa </option>
-										<option value="3">Valgamaa </option>
-									</select>
-									<br/>
-					<div id="scrolltable">
-					<table class="data" id="voting_table">
-						<thead>
-				       	<tr>
-				       		<th></th>
-					    	<th>nr</th>
-					       	<th>Kandidaadi nimi</th>
-					       	<th>Erakond</th>
-				       	</tr>
-						</thead>
-						
-						<tbody id="voting_table_body">
-				       	
-						</tbody>
-						</table>						
-						</div>
-						<br/>
-						<input id="myButton" type="button" class="otsi" value="Hääleta">
-						
+		<h1>KAART</h1><br/>
+		<div id="googleMap" style="width:500px;height:380px;"></div>
+					
 		</div>
 	</div>
 
