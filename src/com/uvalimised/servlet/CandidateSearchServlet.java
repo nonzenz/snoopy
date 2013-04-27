@@ -1,5 +1,5 @@
 package com.uvalimised.servlet;
-import com.google.gson.Gson;
+import com.google.gson.Gson; 
 import com.google.gson.GsonBuilder;
 import com.uvalimised.data.Candidate;
 
@@ -27,6 +27,7 @@ import com.uvalimised.DAO.ConnectionManager;
  *  * CandidateSearchServlet
  *  * @author Helina
  */
+
 @WebServlet("/candSearch")
 public class CandidateSearchServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -44,8 +45,8 @@ public class CandidateSearchServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Connection conn = ConnectionManager.getConnection();
 		
-		String party = request.getParameter("party_id");
-		String area = request.getParameter("area_id");
+		String party = request.getParameter("party");
+		String area = request.getParameter("area");
 		String firstname = request.getParameter("firstname");	
 		String lastname = request.getParameter("lastname");	
 		

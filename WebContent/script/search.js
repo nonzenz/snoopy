@@ -8,7 +8,7 @@ function otsi() {
 
 		$.ajax({
 			type : 'GET',
-			url: '/candSearch',
+			url: '/ValimisedSnoopy/candSearch',
 			 data: { 
     		 'firstname': firstname, 
     		 'lastname': '',
