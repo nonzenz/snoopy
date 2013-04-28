@@ -8,8 +8,10 @@
 	<link href="css/print.css" rel="stylesheet" type="text/css" media="print"/>
 	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>  -->
 	<script src="script/main.js"></script>
-	<link type="text/css" href="css/jquery-ui-1.8.13.custom.css" rel="stylesheet">
-
+	<script src="/path/to/infobox.js" type="text/javascript"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+	<script src="script/infobox.js"></script>
 </head>
 
 <body>
@@ -19,36 +21,77 @@
 		<li><a href="WebStatistika.html">Statistika</a><li>
 		<li><a href="WebKandidaadid.html">Kandidaadid</a><li>
 		<li><a href="WebValijale.html">Valijale</a><li>
-		<li><a href="WebH22leta.html">Hääleta</a><li>
+		<li><a href="WebH22leta.html">Hääleta</a><li>		
 	</ul>
 	
 	
 	<div class="content">
 		<div id="suurKast">
-		<h1>KAART</h1><br/>
-		<div id="googleMap" style="width:640px;height:480px;"></div>
+		<h1>Hääletustulemused</h1><br/>
 		
-		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		<div id="map_canvas" style="width:640px;height:480px;"></div>
+		
 		<script>
-	      
-	      function initialize() {
-	    	var map;
-	        var mapOptions = {
-	          zoom: 7,
-	          center: new google.maps.LatLng(58.588889, 25.786944),
-	          mapTypeId: google.maps.MapTypeId.ROADMAP
-	        };
-	        var map = new google.maps.Map(document.getElementById('googleMap'),
-	            mapOptions);
-	      }
-	      
-	      google.maps.event.addDomListener(window, 'load', initialize);
-	    </script>
-		<div id="googleMap"></div>
-		
-		
-		</div>
-		
+ 	    // Set the Map variable
+      	var map;
+      	function initialize() {	
+            var myOptions = {
+            zoom: 7,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var all = [
+            ["Tartu","Sinised", "Hääli: 5%", "58.3704999", "26.7245999"],
+            ["Paide", "Valged", "Hääli: 15%", "58.8857", "25.5482"],
+            ["Rakvere", "Punased", "Hääli: 24%", "59.3429999", "26.3573999"],
+            ["Jõhvi","Sinised", "Hääli: 17%", "59.3583001", "27.4130013"],
+            ["PõhjaTallinn","Sinised", "Hääli: 5%", "59.4616434", "24.6663227"],
+            ["Rapla","Sinised", "Hääli: 23%", "58.9996999", "24.805"],
+            ["Pärnu", "Kollased", "Hääli: 13%", "58.3852999", "24.5034"],
+            ["Haapsalu","Valged", "Hääli: 18%", "58.9374999", "23.5344"],
+            ["Võru", "Sinised", "Hääli: 25%", "57.8392", "27.0089"],
+      	];							
+        var infoWindow = new google.maps.InfoWindow;
+        map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+        // Set the center of the map
+       	var pos = new google.maps.LatLng(58.588889, 25.786944);
+        map.setCenter(pos);
+        function infoCallback(infowindow, marker) { 
+            return function() {
+            infowindow.open(map, marker);
+        };
+   }			
+   function setMarkers(map, all) {	
+   	for (var i in all) {										
+            var city 	= all[i][0];
+            var party   = all[i][1];
+            var votes   = all[i][2];
+            var lat 	= all[i][3];
+            var lng 	= all[i][4];
+            var latlngset;
+            latlngset = new google.maps.LatLng(lat, lng);
+            var marker = new google.maps.Marker({  
+              map: map,  title: city,  position: latlngset  
+            });
+            
+            
+            var content = '<div class="map-content" style="color:black"><h3>' + '</h3>' + party + '<br />' + votes + '<br /><a href="http://maps.google.com/?daddr=' + city + ' ' + party + votes;					
+            var infowindow = new google.maps.InfoWindow();
+              infowindow.setContent(content);
+              google.maps.event.addListener(
+                marker, 
+                'click', 
+                infoCallback(infowindow, marker)
+              );
+          }
+        }			
+        // Set all markers in the all variable
+        setMarkers(map, all);
+      };
+      // Initializes the Google Map
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+	</div>  
+
 	<div id="footer" class="no-print">
 	Rakenduses realiseeritud e-valimiste näide on realiseeritud tehnoloogiate praktiseerimise eesmärgil ning ei ole mõeldud reaalsete e-valimiste korraldamiseks. Kokkulangevused reaalse e-valimiste protsessiga on juhuslikud.
 		<br>
@@ -57,6 +100,5 @@
 		<a href = "#">Terms of Use</a> | <a href = "#">Privacy Policy</a>
 	</div>
 	</div>
-
 	
 </body>
