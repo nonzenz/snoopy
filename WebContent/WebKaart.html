@@ -9,7 +9,7 @@
 	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>  -->
 	<script src="script/main.js"></script>
 	<link type="text/css" href="css/jquery-ui-1.8.13.custom.css" rel="stylesheet">
-	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAyIK-iw86jMLaOMSZmWLZM5s-j_8ru0lw&sensor=false"></script>
+
 </head>
 
 <body>
@@ -26,11 +26,29 @@
 	<div class="content">
 		<div id="suurKast">
 		<h1>KAART</h1><br/>
-		<div id="googleMap" style="width:500px;height:380px;"></div>
-					
+		<div id="googleMap" style="width:640px;height:480px;"></div>
+		
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		<script>
+	      
+	      function initialize() {
+	    	var map;
+	        var mapOptions = {
+	          zoom: 7,
+	          center: new google.maps.LatLng(58.588889, 25.786944),
+	          mapTypeId: google.maps.MapTypeId.ROADMAP
+	        };
+	        var map = new google.maps.Map(document.getElementById('googleMap'),
+	            mapOptions);
+	      }
+	      
+	      google.maps.event.addDomListener(window, 'load', initialize);
+	    </script>
+		<div id="googleMap"></div>
+		
+		
 		</div>
-	</div>
-
+		
 	<div id="footer" class="no-print">
 	Rakenduses realiseeritud e-valimiste näide on realiseeritud tehnoloogiate praktiseerimise eesmärgil ning ei ole mõeldud reaalsete e-valimiste korraldamiseks. Kokkulangevused reaalse e-valimiste protsessiga on juhuslikud.
 		<br>
@@ -38,5 +56,7 @@
 		<br>
 		<a href = "#">Terms of Use</a> | <a href = "#">Privacy Policy</a>
 	</div>
+	</div>
 
+	
 </body>
