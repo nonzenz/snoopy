@@ -50,23 +50,23 @@
             ["Haapsalu","Valged", "Hääli: 18%", "58.9374999", "23.5344"],
             ["Võru", "Sinised", "Hääli: 25%", "57.8392", "27.0089"],
       	];
+      
+        //var partys = [
+        //["http://maps.google.com/mapfiles/ms/icons/blue-dot.png", "Sinised"],
+        //["http://maps.google.com/mapfiles/ms/icons/red-dot.png", "Punased"],
+        //["http://maps.google.com/mapfiles/ms/icons/green-dot.png", "Rohelised"],
+        //["http://maps.google.com/mapfiles/ms/icons/yellow-dot.png", "Kollased"],
+        //["http://maps.google.com/mapfiles/ms/icons/white-dot.png", "Valged"],
+        //]
         
-        var partys = [
-        ["http://maps.google.com/mapfiles/ms/icons/blue-dot.png", "Sinised"],
-        ["http://maps.google.com/mapfiles/ms/icons/red-dot.png", "Punased"],
-        ["http://maps.google.com/mapfiles/ms/icons/green-dot.png", "Rohelised"],
-        ["http://maps.google.com/mapfiles/ms/icons/yellow-dot.png", "Kollased"],
-        ["http://maps.google.com/mapfiles/ms/icons/white-dot.png", "Valged"],
-        ]
-        
-        var legend = document.getElementById('legend');
-        for (var style in styles) {
-          var name = style.name;
-          var icon = style.icon;
-          var div = document.createElement('div');
-          div.innerHTML = '<img src="' + icon + '"> ' + name;
-          legend.appendChild(div);
-        }
+        //var legend = document.getElementById('legend');
+        //for (var style in styles) {
+          //var name = style.name;
+          //var icon = style.icon;
+          //var div = document.createElement('div');
+          //div.innerHTML = '<img src="' + icon + '"> ' + name;
+          //legend.appendChild(div);
+       // }
         
         var infoWindow = new google.maps.InfoWindow;
         map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
